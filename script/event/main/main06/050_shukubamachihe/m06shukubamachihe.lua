@@ -1,0 +1,15 @@
+function main06_shukubamachihe01_start()
+  CH("HERO"):SetMotionRaito(Raito(1))
+  CH("PARTNER"):SetMotionRaito(Raito(1))
+  CH("HERO"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):DirTo(CH("HERO"), Speed(350), ROT_TYPE.NEAR)
+  CH("PARTNER"):WaitRotate()
+  CH("HERO"):DirTo(CH("PARTNER"), Speed(350), ROT_TYPE.NEAR)
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  WINDOW:SwitchTalk({PARTNER_0 = -285772008, PARTNER_1 = -135510439})
+  WINDOW:SwitchTalk({PARTNER_0 = -591325798, PARTNER_1 = -975559461})
+  WINDOW:SwitchTalk({PARTNER_0 = -1969507812, PARTNER_1 = -1820294307})
+  WINDOW:CloseMessage()
+end
+

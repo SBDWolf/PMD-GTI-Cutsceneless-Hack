@@ -1,0 +1,11 @@
+HAHAKOMORIMovTbl = {}
+function FreeCharMoveHAHAKOMORI()
+  FreeCharManageTable("HAHAKOMORI", HAHAKOMORIMovTbl, true)
+end
+function HAHAKOMORIMovTbl.CLEAR_DUNREST_HAHAKOMORI()
+end
+function HAHAKOMORIMovTbl.PARADISE_MODE_HAHAKOMORI()
+end
+function HAHAKOMORIMovTbl.NO_MESSAGE_HAHAKOMORI()
+end
+

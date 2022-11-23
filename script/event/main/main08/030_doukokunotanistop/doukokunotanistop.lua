@@ -1,0 +1,13 @@
+function main08_doukokunotanistop01_start()
+  CH("HERO"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):DirTo(CH("HERO"), Speed(350), ROT_TYPE.NEAR)
+  CH("PARTNER"):WaitRotate()
+  CH("HERO"):DirTo(CH("PARTNER"), Speed(350), ROT_TYPE.NEAR)
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.SPECIAL02)
+  WINDOW:SwitchTalk({PARTNER_0 = 223003850, PARTNER_1 = 340915595})
+  WINDOW:SwitchTalk({PARTNER_0 = 1065133640, PARTNER_1 = 644323081})
+  WINDOW:SwitchTalk({PARTNER_0 = 1764098510, PARTNER_1 = 1883058319})
+  WINDOW:CloseMessage()
+end
+

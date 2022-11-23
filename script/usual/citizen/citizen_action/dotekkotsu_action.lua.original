@@ -1,0 +1,12 @@
+DOTEKKOTSUMovTbl = {}
+function FreeCharMoveDOTEKKOTSU()
+  FreeCharManageTable("DOTEKKOTSU", DOTEKKOTSUMovTbl, true)
+end
+function DOTEKKOTSUMovTbl.CLEAR_DUNREST_DOTEKKOTSU()
+end
+function DOTEKKOTSUMovTbl.PARADISE_MODE_DOTEKKOTSU()
+  FREE_MOVE_SYSTEM:CreateFmcCtrl_ForShopStaff(CH("DOTEKKOTSU"))
+end
+function DOTEKKOTSUMovTbl.NO_MESSAGE_DOTEKKOTSU()
+end
+

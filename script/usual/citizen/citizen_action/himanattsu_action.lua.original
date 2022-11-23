@@ -1,0 +1,11 @@
+HIMANATTSUMovTbl = {}
+function FreeCharMoveHIMANATTSU()
+  FreeCharManageTable("HIMANATTSU", HIMANATTSUMovTbl, true)
+end
+function HIMANATTSUMovTbl.CLEAR_DUNREST_HIMANATTSU()
+end
+function HIMANATTSUMovTbl.PARADISE_MODE_HIMANATTSU()
+end
+function HIMANATTSUMovTbl.NO_MESSAGE_HIMANATTSU()
+end
+

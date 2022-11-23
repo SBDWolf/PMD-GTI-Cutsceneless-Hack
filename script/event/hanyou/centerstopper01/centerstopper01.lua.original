@@ -1,0 +1,15 @@
+function hanyou_centerstopper01_start()
+  CH("HERO"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):DirTo(CH("HERO"), Speed(350), ROT_TYPE.NEAR)
+  CH("PARTNER"):WaitRotate()
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  WINDOW:SwitchTalk({PARTNER_0 = -1656904204, PARTNER_1 = -2077846347})
+  WINDOW:CloseMessage()
+  CH("HERO"):DirTo(CH("PARTNER"), Speed(350), ROT_TYPE.NEAR)
+  CH("HERO"):WaitRotate()
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  WINDOW:SwitchTalk({PARTNER_0 = -1358182538, PARTNER_1 = -1240402377})
+  WINDOW:CloseMessage()
+end
+

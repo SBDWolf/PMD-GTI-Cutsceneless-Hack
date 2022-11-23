@@ -1,0 +1,11 @@
+IWAPARESUMovTbl = {}
+function FreeCharMoveIWAPARESU()
+  FreeCharManageTable("IWAPARESU", IWAPARESUMovTbl, true)
+end
+function IWAPARESUMovTbl.CLEAR_DUNREST_IWAPARESU()
+end
+function IWAPARESUMovTbl.PARADISE_MODE_IWAPARESU()
+end
+function IWAPARESUMovTbl.NO_MESSAGE_IWAPARESU()
+end
+

@@ -1,0 +1,11 @@
+ISHIZUMAIMovTbl = {}
+function FreeCharMoveISHIZUMAI()
+  FreeCharManageTable("ISHIZUMAI", ISHIZUMAIMovTbl, true)
+end
+function ISHIZUMAIMovTbl.CLEAR_DUNREST_ISHIZUMAI()
+end
+function ISHIZUMAIMovTbl.PARADISE_MODE_ISHIZUMAI()
+end
+function ISHIZUMAIMovTbl.NO_MESSAGE_ISHIZUMAI()
+end
+

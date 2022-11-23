@@ -1,0 +1,11 @@
+YABUKURONMovTbl = {}
+function FreeCharMoveYABUKURON()
+  FreeCharManageTable("YABUKURON", YABUKURONMovTbl, true)
+end
+function YABUKURONMovTbl.CLEAR_DUNREST_YABUKURON()
+end
+function YABUKURONMovTbl.PARADISE_MODE_YABUKURON()
+end
+function YABUKURONMovTbl.NO_MESSAGE_YABUKURON()
+end
+

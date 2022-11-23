@@ -1,0 +1,122 @@
+dofile("script/include/inc_all.lua")
+dofile("script/include/inc_event.lua")
+function groundInit()
+end
+function groundStart()
+end
+function main02_kageroutougecleargoyarare01_init()
+  if FLAG.NowResumeFlag == CONST.FLAG_TRUE then
+    subEveFromProgFadeSet()
+    CAMERA:MoveToHero(TimeSec(0), ACCEL_TYPE.NONE, DECEL_TYPE.HIGH)
+    SCREEN_A:FadeIn(TimeSec(0.5), false)
+    SCREEN_B:FadeIn(TimeSec(0.5), true)
+    subSaveflagM02_160_01()
+    SYSTEM:NextEntry(KEEP_PLACEMENT.ON)
+  end
+end
+function main02_kageroutougecleargoyarare01_start()
+  subEveFromProgFadeSet()
+  subComSaveCompulFailed()
+  subEveFadeAfterTime()
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.PAIN)
+  WINDOW:SwitchTalk({PARTNER_0 = -1060471972, PARTNER_1 = -640595427})
+  WINDOW:KeyWait()
+  SCREEN_A:FadeOutAll(TimeSec(0.5), true)
+  WINDOW:ForceCloseMessage()
+  TASK:Sleep(TimeSec(0.5))
+  SCREEN_A:FadeInAll(TimeSec(0), true)
+  CAMERA:SetAzimuthDifferenceVolume(Volume(5))
+  CAMERA:SetEye(SymCam("CAMERA_00"))
+  CAMERA:SetTgt(SymCam("CAMERA_00"))
+  CH("HERO"):SetMotion(SymMot("EV001_DOWN01"), LOOP.ON, TimeSec(0))
+  CH("PARTNER"):SetMotion(SymMot("EV001_DOWN01"), LOOP.ON, TimeSec(0))
+  CH("DOKKORAA_1"):SetMotion(SymMot("EV002_FALL00"), LOOP.ON, TimeSec(0))
+  CH("DOKKORAA_2"):SetMotion(SymMot("EV002_FALL00"), LOOP.ON, TimeSec(0))
+  TASK:Sleep(TimeSec(0.5))
+  local taskHeroDownUp = function()
+    CH("HERO"):SetMotion(SymMot("EV001_DOWN02"), LOOP.OFF)
+    CH("HERO"):WaitPlayMotion()
+    CH("HERO"):SetFacialMotion(FACIAL_MOTION.NORMAL)
+    subEveLookAround(CH("HERO"), Speed(600))
+    CH("HERO"):DirTo(CH("PARTNER"), Speed(500), ROT_TYPE.NEAR)
+  end
+  local taskPartnerDownUp = function()
+    CH("PARTNER"):SetMotion(SymMot("EV001_DOWN02"), LOOP.OFF)
+    CH("PARTNER"):WaitPlayMotion()
+    CH("PARTNER"):SetFacialMotion(FACIAL_MOTION.NORMAL)
+    subEveLookAround(CH("PARTNER"), Speed(600))
+    CH("PARTNER"):DirTo(CH("HERO"), Speed(500), ROT_TYPE.NEAR)
+    CH("PARTNER"):WaitRotate()
+  end
+  local taskDokkoraa1DownUp = function()
+    CH("DOKKORAA_1"):SetMotion(SymMot("WAIT02"), LOOP.ON, TimeSec(0.4))
+    CH("DOKKORAA_1"):WaitPlayMotion()
+    CH("DOKKORAA_1"):SetFacialMotion(FACIAL_MOTION.NORMAL)
+    subEveLookAround(CH("DOKKORAA_1"), Speed(600))
+    CH("DOKKORAA_1"):DirTo(RotateTarget(0), Speed(500), ROT_TYPE.NEAR)
+    CH("DOKKORAA_1"):WaitRotate()
+  end
+  local taskDokkoraa2DownUp = function()
+    CH("DOKKORAA_2"):SetMotion(SymMot("WAIT02"), LOOP.ON, TimeSec(0.4))
+    CH("DOKKORAA_2"):WaitPlayMotion()
+    CH("DOKKORAA_2"):SetFacialMotion(FACIAL_MOTION.NORMAL)
+    subEveLookAround(CH("DOKKORAA_2"), Speed(600))
+    CH("DOKKORAA_2"):DirTo(RotateTarget(0), Speed(500), ROT_TYPE.NEAR)
+    CH("DOKKORAA_2"):WaitRotate()
+  end
+  SOUND:PlayBgm(SymSnd("BGM_DUN_25"), Volume(256))
+  SCREEN_A:FadeIn(TimeSec(0.5), true)
+  subEveFadeAfterTime()
+  TASK:Regist(Group("hero"), taskHeroDownUp)
+  TASK:Regist(Group("grpDokkoraa1"), taskDokkoraa1DownUp)
+  TASK:Sleep(TimeSec(0.2))
+  TASK:Regist(Group("partner"), taskPartnerDownUp)
+  TASK:Regist(Group("grpDokkoraa2"), taskDokkoraa2DownUp)
+  TASK:WaitTask(Group("grpDokkoraa2"))
+  TASK:Sleep(TimeSec(0.2))
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.THINK)
+  WINDOW:SwitchTalk({PARTNER_0 = -218359330, PARTNER_1 = -337172321})
+  WINDOW:KeyWait()
+  CH("PARTNER"):SetFacialMotion(FACIAL_MOTION.DECIDE)
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.DECIDE)
+  WINDOW:SwitchTalk({PARTNER_0 = -1532576168, PARTNER_1 = -1111650535})
+  WINDOW:SwitchTalk({PARTNER_0 = -1768891174, PARTNER_1 = -1886655077})
+  subEveCloseMsg()
+  CH("PARTNER"):SetFacialMotion(FACIAL_MOTION.NORMAL)
+  WINDOW:DrawFace(72, 16, SymAct("DOKKORAA_1"), FACE_TYPE.NORMAL)
+  WINDOW:Talk(SymAct("DOKKORAA_1"), 135524692)
+  CH("HERO"):DirTo(RotateTarget(-160), Speed(350), ROT_TYPE.NEAR)
+  TASK:Sleep(TimeSec(0.1))
+  CH("PARTNER"):DirTo(RotateTarget(170), Speed(350), ROT_TYPE.NEAR)
+  WINDOW:Talk(SymAct("DOKKORAA_1"), 285786133)
+  WINDOW:Talk(SymAct("DOKKORAA_1"), -134596273)
+  subEveCloseMsg()
+  WINDOW:DrawFace(272, 16, SymAct("DOKKORAA_2"), FACE_TYPE.NORMAL)
+  WINDOW:Talk(SymAct("DOKKORAA_2"), -287242226)
+  subEveCloseMsg()
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  WINDOW:SwitchTalk({PARTNER_0 = -976462899, PARTNER_1 = -589862260})
+  WINDOW:SwitchTalk({PARTNER_0 = -1818821557, PARTNER_1 = -1970418422})
+  WINDOW:CloseMessage()
+  CAMERA:MoveToHero(Speed(1.5, ACCEL_TYPE.NONE, DECEL_TYPE.HIGH))
+  CAMERA:WaitMove()
+  subSaveflagM02_160_01()
+  TASK:Sleep(TimeSec(0.2))
+  if Ground_Save(ground) then
+    return
+  end
+  SYSTEM:NextEntry(KEEP_PLACEMENT.ON)
+end
+function main02_kageroutougecleargoyarare01_end()
+end
+function subSaveflagM02_160_01()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M02_KAGEROUTOUGECLEARGOYARARE_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  FLAG.Boss1stClear = CONST.FLAG_TRUE
+end
+function groundEnd()
+end
+

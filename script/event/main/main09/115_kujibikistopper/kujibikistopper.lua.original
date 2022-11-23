@@ -1,0 +1,15 @@
+function main09_kujibikistopper01_start()
+  CH("HERO"):SetMotionRaito(Raito(1))
+  CH("PARTNER"):SetMotionRaito(Raito(1))
+  CH("HERO"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):DirTo(CH("HERO"), Speed(350), ROT_TYPE.NEAR)
+  CH("PARTNER"):WaitRotate()
+  CH("HERO"):DirTo(CH("PARTNER"), Speed(350), ROT_TYPE.NEAR)
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.SAD)
+  WINDOW:SwitchTalk({PARTNER_0 = 1797640701, PARTNER_1 = 1916723388})
+  WINDOW:SwitchTalk({PARTNER_0 = 1494463359, PARTNER_1 = 1074299454})
+  WINDOW:SwitchTalk({PARTNER_0 = 256447737, PARTNER_1 = 374482360})
+  WINDOW:CloseMessage()
+end
+

@@ -1,0 +1,17 @@
+function main03_keijibanmirenai01_start()
+  CH("HERO"):SetMotionRaito(Raito(1))
+  CH("PARTNER"):SetMotionRaito(Raito(1))
+  CH("HERO"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):SetMotion(SymMot("WAIT02"), LOOP.ON)
+  CH("PARTNER"):DirTo(CH("HERO"), Speed(500), ROT_TYPE.NEAR)
+  CH("PARTNER"):WaitRotate()
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  WINDOW:SwitchTalk({PARTNER_0 = 309530129, PARTNER_1 = 191381328})
+  WINDOW:CloseMessage()
+  CH("HERO"):DirTo(CH("PARTNER"), Speed(350), ROT_TYPE.NEAR)
+  CH("HERO"):WaitRotate()
+  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  WINDOW:SwitchTalk({PARTNER_0 = 541420691, PARTNER_1 = 962485714})
+  WINDOW:CloseMessage()
+end
+
