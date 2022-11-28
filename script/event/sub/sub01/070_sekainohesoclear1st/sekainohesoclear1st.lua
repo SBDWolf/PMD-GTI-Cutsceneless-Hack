@@ -12,21 +12,21 @@ function sub01_sekainohesoclear1st01_init()
 end
 function sub01_sekainohesoclear1st01_start()
   subEveFromProgFadeSet()
-  TASK:Sleep(TimeSec(1))
-  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.THINK)
-  WINDOW:SwitchTalk({PARTNER_0 = -941608643, PARTNER_1 = -553975684})
-  WINDOW:SwitchTalk({PARTNER_0 = -170503233, PARTNER_1 = -322084098})
-  WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
-  WINDOW:SwitchTalk({PARTNER_0 = -1551043527, PARTNER_1 = -1164458632})
-  WINDOW:SwitchTalk({PARTNER_0 = -1850042693, PARTNER_1 = -2002671622})
-  WINDOW:SwitchTalk({PARTNER_0 = 255441717, PARTNER_1 = 371362420})
-  WINDOW:CloseMessage()
-  TASK:Sleep(TimeSec(0.5))
-  SYSTEM:UpdateNextDayParameter()
-  TASK:Sleep(TimeSec(0.2))
-  if Ground_Save(ground) then
-    return
-  end
+  -- TASK:Sleep(TimeSec(1))
+  -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.THINK)
+  -- WINDOW:SwitchTalk({PARTNER_0 = -941608643, PARTNER_1 = -553975684})
+  -- WINDOW:SwitchTalk({PARTNER_0 = -170503233, PARTNER_1 = -322084098})
+  -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+  -- WINDOW:SwitchTalk({PARTNER_0 = -1551043527, PARTNER_1 = -1164458632})
+  -- WINDOW:SwitchTalk({PARTNER_0 = -1850042693, PARTNER_1 = -2002671622})
+  -- WINDOW:SwitchTalk({PARTNER_0 = 255441717, PARTNER_1 = 371362420})
+  -- WINDOW:CloseMessage()
+  -- TASK:Sleep(TimeSec(0.5))
+  -- SYSTEM:UpdateNextDayParameter()
+  -- TASK:Sleep(TimeSec(0.2))
+  -- if Ground_Save(ground) then
+  --   return
+  -- end
   FLAG.StoryPlayerMode = CONST.ST_MODE_NONE
   subSaveflagS01_070_01()
 end

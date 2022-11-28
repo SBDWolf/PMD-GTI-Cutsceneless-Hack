@@ -31,7 +31,7 @@ function main16_shuppatsuok01_start()
     end
     function __scopeFuncTbl.LABEL_YES()
       WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
-      WINDOW:SwitchTalk({PARTNER_0 = 1133680826, PARTNER_1 = 1518971387})
+      -- WINDOW:SwitchTalk({PARTNER_0 = 1133680826, PARTNER_1 = 1518971387})
       WINDOW:SwitchTalk({PARTNER_0 = 1906637368, PARTNER_1 = 1757399929})
       local __labelCnt = 0
       local __labelTbl = {}
@@ -48,10 +48,10 @@ function main16_shuppatsuok01_start()
     end
     function __scopeFuncTbl.LABEL_SURE()
       WINDOW:CloseMessage()
-      WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
-      WINDOW:SwitchTalk({PARTNER_0 = 365444924, PARTNER_1 = 215158397})
-      WINDOW:SwitchTalk({PARTNER_0 = -1958014286, PARTNER_1 = -1840241677})
-      WINDOW:CloseMessage()
+      -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+      -- WINDOW:SwitchTalk({PARTNER_0 = 365444924, PARTNER_1 = 215158397})
+      -- WINDOW:SwitchTalk({PARTNER_0 = -1958014286, PARTNER_1 = -1840241677})
+      -- WINDOW:CloseMessage()
       SOUND:FadeOutBgm(TimeSec(0.5))
       SOUND:FadeOutEnv(TimeSec(0.5))
       subEveStartFadeSet()

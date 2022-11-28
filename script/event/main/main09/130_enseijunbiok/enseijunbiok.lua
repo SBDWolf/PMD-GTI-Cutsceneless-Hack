@@ -36,8 +36,8 @@ function main09_enseijunbiok01_start()
     end
     function __scopeFuncTbl.LABEL_YES()
       WINDOW:DrawFace(20, 88, SymAct("BURAKKII"), FACE_TYPE.NORMAL)
-      WINDOW:Talk(SymAct("BURAKKII"), -1212830665)
-      WINDOW:Talk(SymAct("BURAKKII"), -1667694604)
+      -- WINDOW:Talk(SymAct("BURAKKII"), -1212830665)
+      -- WINDOW:Talk(SymAct("BURAKKII"), -1667694604)
       WINDOW:Talk(SymAct("BURAKKII"), -2054959435)
       local __labelCnt = 0
       local __labelTbl = {}
@@ -53,10 +53,10 @@ function main09_enseijunbiok01_start()
       return __labelTbl[__res]
     end
     function __scopeFuncTbl.LABEL_SURE()
-      WINDOW:DrawFace(20, 88, SymAct("BURAKKII"), FACE_TYPE.NORMAL)
-      WINDOW:Talk(SymAct("BURAKKII"), 1587170073)
-      WINDOW:Talk(SymAct("BURAKKII"), 1199667800)
-      WINDOW:CloseMessage()
+      -- WINDOW:DrawFace(20, 88, SymAct("BURAKKII"), FACE_TYPE.NORMAL)
+      -- WINDOW:Talk(SymAct("BURAKKII"), 1587170073)
+      -- WINDOW:Talk(SymAct("BURAKKII"), 1199667800)
+      -- WINDOW:CloseMessage()
       SOUND:FadeOutBgm(TimeSec(0.5))
       SOUND:FadeOutEnv(TimeSec(0.5))
       subEveStartFadeSet()

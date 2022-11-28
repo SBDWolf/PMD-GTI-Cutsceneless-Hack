@@ -9,9 +9,6 @@ end
 function main02_kouzannodoukutsuclear1st01_start()
   subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
-  -- START OF OLD COMMENTED OUT CODE
-
-  -- WORKS
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
   -- WINDOW:SwitchTalk({PARTNER_0 = -1447530252, PARTNER_1 = -1331478091})
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.EMOTION)
@@ -23,9 +20,6 @@ function main02_kouzannodoukutsuclear1st01_start()
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
   -- SOUND:FadeInEnv(SymSnd("SE_EVT_CRYSTAL_SHINE_LP"), TimeSec(0.5), Volume(256))
   -- SCREEN_A:FadeIn(TimeSec(0.5), true)
-  -- WORKS
-
-
   -- TASK:Sleep(TimeSec(0.5))
   -- CH("HERO"):RunTo(SymPos("P01_HERO"), Speed(2.5))
   -- CH("PARTNER"):RunTo(SymPos("P01_PARTNER"), Speed(2.5))
@@ -36,11 +30,7 @@ function main02_kouzannodoukutsuclear1st01_start()
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.EMOTION)
   -- WINDOW:SwitchTalk({PARTNER_0 = -1910926, PARTNER_1 = -419830221})
   -- WINDOW:CloseMessage()
-
-  -- WORKS
   CAMERA:SetAzimuthDifferenceVolume(Volume(4.5))
-  -- WORKS
-  
   -- CAMERA:SetEye(SymCam("CAMERA_01"))
   -- CAMERA:SetTgt(SymCam("CAMERA_01"))
   -- CH("HERO"):WalkTo(SymPos("P02_HERO"), Speed(1.5))
@@ -116,16 +106,10 @@ function main02_kouzannodoukutsuclear1st01_start()
   --   Speed(2),
   --   RotateTarget(0)
   -- })
-
-
-  -- WORKS
   -- TASK:Sleep(TimeSec(1))
   -- SOUND:FadeOutEnv(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- TASK:Sleep(TimeSec(1))
-  -- WORKS
-
-  -- END OF OLD COMMENTED OUT CODE
   CAMERA:ResetAzimuthDifferenceVolume()
   subComResultClear()
   SYSTEM:UpdateNextDayParameter()
@@ -498,10 +482,8 @@ function main02_kouzannodoukutsuclear1st05_start()
   -- CH("PARTNER"):SetVisible(false)
   CH("HERO"):SetPosition(SymPos("P01_HERO"))
   CH("PARTNER"):SetPosition(SymPos("P01_PARTNER"))
-  CH("HERO"):DirTo(CH("PARTNER"), Speed(350), ROT_TYPE.NEAR)
-  CH("PARTNER"):DirTo(CH("HERO"), Speed(350), ROT_TYPE.NEAR)
-  CH("HERO"):WaitRotate()
-  CH("PARTNER"):WaitRotate()
+  CH("HERO"):SetDir(CH("PARTNER"))
+  CH("PARTNER"):SetDir(CH("HERO"))
   SOUND:FadeInBgm(SymSnd("BGM_MAP_TOWN_01"), TimeSec(0), Volume(256))
   SCREEN_A:FadeIn(TimeSec(0.5), true)
   -- CH("HERO"):SetVisible(true)

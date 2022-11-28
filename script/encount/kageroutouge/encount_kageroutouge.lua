@@ -783,48 +783,48 @@ function EventTriggerPush(symbol)
         WINDOW:SelectChain(1536216897, 1)
         WINDOW:SelectChain(1891474562, 0)
         if WINDOW:SelectEnd(MENU_SELECT_MODE.DISABLE_CANCEL) == 1 then
-          -- TASK:Regist(jumpTask, {
-          --   "UP",
-          --   "PLAYER",
-          --   "DE02_STEP_0_0",
-          --   "DE02_STEP_0_1",
-          --   "DE02_STEP_0_2",
-          --   "LAND_POINT_1_PLAYER"
-          -- })
-          -- if CHARA:IsExist("BUDDY1") then
-          --   TASK:Regist(jumpTask, {
-          --     "UP",
-          --     "BUDDY1",
-          --     "DE02_STEP_0_0",
-          --     "DE02_STEP_0_1",
-          --     "DE02_STEP_0_2",
-          --     "LAND_POINT_1_BUDDY1"
-          --   })
-          -- end
-          -- TASK:Sleep(TimeSec(0.4))
-          -- if CHARA:IsExist("BUDDY2") then
-          --   TASK:Regist(jumpTask, {
-          --     "UP",
-          --     "BUDDY2",
-          --     "DE02_STEP_0_0",
-          --     "DE02_STEP_0_1",
-          --     "DE02_STEP_0_2",
-          --     "LAND_POINT_1_BUDDY2"
-          --   })
-          -- end
-          -- TASK:Sleep(TimeSec(0.4))
-          -- if CHARA:IsExist("BUDDY3") then
-          --   TASK:Regist(jumpTask, {
-          --     "UP",
-          --     "BUDDY3",
-          --     "DE02_STEP_0_0",
-          --     "DE02_STEP_0_1",
-          --     "DE02_STEP_0_2",
-          --     "LAND_POINT_1_BUDDY3"
-          --   })
-          -- end
+          TASK:Regist(jumpTask, {
+            "UP",
+            "PLAYER",
+            "DE02_STEP_0_0",
+            "DE02_STEP_0_1",
+            "DE02_STEP_0_2",
+            "LAND_POINT_1_PLAYER"
+          })
+          if CHARA:IsExist("BUDDY1") then
+            TASK:Regist(jumpTask, {
+              "UP",
+              "BUDDY1",
+              "DE02_STEP_0_0",
+              "DE02_STEP_0_1",
+              "DE02_STEP_0_2",
+              "LAND_POINT_1_BUDDY1"
+            })
+          end
+          TASK:Sleep(TimeSec(0.4))
+          if CHARA:IsExist("BUDDY2") then
+            TASK:Regist(jumpTask, {
+              "UP",
+              "BUDDY2",
+              "DE02_STEP_0_0",
+              "DE02_STEP_0_1",
+              "DE02_STEP_0_2",
+              "LAND_POINT_1_BUDDY2"
+            })
+          end
+          TASK:Sleep(TimeSec(0.4))
+          if CHARA:IsExist("BUDDY3") then
+            TASK:Regist(jumpTask, {
+              "UP",
+              "BUDDY3",
+              "DE02_STEP_0_0",
+              "DE02_STEP_0_1",
+              "DE02_STEP_0_2",
+              "LAND_POINT_1_BUDDY3"
+            })
+          end
           FLAG.EncKagerouThroughFlag = CONST.FLAG_TRUE
-          -- TASK:Sleep(TimeSec(0.8))
+          TASK:Sleep(TimeSec(0.8))
           subEveToProgFadeSet()
           SYSTEM:DungeonFloorChange()
         end
@@ -846,47 +846,47 @@ function EventTriggerPush(symbol)
         WINDOW:SelectChain(652688132, 1)
         WINDOW:SelectChain(1073482309, 0)
         if WINDOW:SelectEnd(MENU_SELECT_MODE.DISABLE_CANCEL) == 1 then
-          -- TASK:Regist(jumpTask, {
-          --   "UP",
-          --   "PLAYER",
-          --   "DE02_STEP_1_0",
-          --   "DE02_STEP_1_1",
-          --   "DE02_STEP_1_2",
-          --   "LAND_POINT_3_PLAYER"
-          -- })
-          -- if CHARA:IsExist("BUDDY1") then
-          --   TASK:Regist(jumpTask, {
-          --     "UP",
-          --     "BUDDY1",
-          --     "DE02_STEP_1_0",
-          --     "DE02_STEP_1_1",
-          --     "DE02_STEP_1_2",
-          --     "LAND_POINT_3_BUDDY1"
-          --   })
-          -- end
-          -- TASK:Sleep(TimeSec(0.4))
-          -- if CHARA:IsExist("BUDDY2") then
-          --   TASK:Regist(jumpTask, {
-          --     "UP",
-          --     "BUDDY2",
-          --     "DE02_STEP_1_0",
-          --     "DE02_STEP_1_1",
-          --     "DE02_STEP_1_2",
-          --     "LAND_POINT_3_BUDDY2"
-          --   })
-          -- end
-          -- TASK:Sleep(TimeSec(0.4))
-          -- if CHARA:IsExist("BUDDY3") then
-          --   TASK:Regist(jumpTask, {
-          --     "UP",
-          --     "BUDDY3",
-          --     "DE02_STEP_1_0",
-          --     "DE02_STEP_1_1",
-          --     "DE02_STEP_1_2",
-          --     "LAND_POINT_3_BUDDY3"
-          --   })
-          -- end
-          -- TASK:Sleep(TimeSec(0.8))
+          TASK:Regist(jumpTask, {
+            "UP",
+            "PLAYER",
+            "DE02_STEP_1_0",
+            "DE02_STEP_1_1",
+            "DE02_STEP_1_2",
+            "LAND_POINT_3_PLAYER"
+          })
+          if CHARA:IsExist("BUDDY1") then
+            TASK:Regist(jumpTask, {
+              "UP",
+              "BUDDY1",
+              "DE02_STEP_1_0",
+              "DE02_STEP_1_1",
+              "DE02_STEP_1_2",
+              "LAND_POINT_3_BUDDY1"
+            })
+          end
+          TASK:Sleep(TimeSec(0.4))
+          if CHARA:IsExist("BUDDY2") then
+            TASK:Regist(jumpTask, {
+              "UP",
+              "BUDDY2",
+              "DE02_STEP_1_0",
+              "DE02_STEP_1_1",
+              "DE02_STEP_1_2",
+              "LAND_POINT_3_BUDDY2"
+            })
+          end
+          TASK:Sleep(TimeSec(0.4))
+          if CHARA:IsExist("BUDDY3") then
+            TASK:Regist(jumpTask, {
+              "UP",
+              "BUDDY3",
+              "DE02_STEP_1_0",
+              "DE02_STEP_1_1",
+              "DE02_STEP_1_2",
+              "LAND_POINT_3_BUDDY3"
+            })
+          end
+          TASK:Sleep(TimeSec(0.8))
           subEveToProgFadeSet()
           SYSTEM:DungeonFloorChange()
         end

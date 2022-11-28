@@ -30,10 +30,10 @@ function hanyou_tsuginoasaonlyplayer01_start()
     subMapBgmParadise()
     FLAG.MapFrom = CONST.MAP_PARA_HOME_OUT
     FLAG.MapFlags = CONST.MAP_PARA_HOME_IN
-    TASK:Sleep(TimeSec(0.2))
-    if Ground_Save(ground) then
-      return
-    end
+    -- TASK:Sleep(TimeSec(0.2))
+    -- if Ground_Save(ground) then
+    --   return
+    -- end
     subEveEndFadeSet2()
   else
     FLAG.MapFrom = CONST.MAP_EVENT
@@ -57,10 +57,10 @@ function hanyou_tsuginoasaonlyplayer02_start()
     subMapBgmParadise()
     FLAG.MapFrom = CONST.MAP_PARA_HOME_OUT
     FLAG.MapFlags = CONST.MAP_PARA_HOME_IN
-    TASK:Sleep(TimeSec(0.2))
-    if Ground_Save(ground) then
-      return
-    end
+    -- TASK:Sleep(TimeSec(0.2))
+    -- if Ground_Save(ground) then
+    --   return
+    -- end
     subEveEndFadeSet2()
   else
     CAMERA:MoveToPlayer(Speed(2, ACCEL_TYPE.NONE, DECEL_TYPE.HIGH))
@@ -81,30 +81,32 @@ function EventTriggerIn(symbol)
   end
 end
 function tsuginoasa_event_common()
-  WINDOW:Narration(TimeSec(0.3), TimeSec(0.3), -2113742906)
-  WINDOW:CloseMessage()
-  TASK:Sleep(TimeSec(0.5))
-  CH("PLAYER"):SetDir(RotateTarget(45))
+  -- WINDOW:Narration(TimeSec(0.3), TimeSec(0.3), -2113742906)
+  -- WINDOW:CloseMessage()
+  -- TASK:Sleep(TimeSec(0.5))
+  -- CH("PLAYER"):SetDir(RotateTarget(45))
   if CHARA:IsHeroCastCandidate("HERO") and CHARA:IsHeroCastCandidate("PARTNER") then
-    CH("PLAYER"):SetMotion(SymMot("EV001_SLEEP01"), LOOP.ON, TimeSec(0))
+    -- CH("PLAYER"):SetMotion(SymMot("EV001_SLEEP01"), LOOP.ON, TimeSec(0))
     CAMERA:SetAzimuthDifferenceVolume(Volume(5))
     CAMERA:SetEye(SymCam("CAMERA_00"))
     CAMERA:SetTgt(SymCam("CAMERA_00"))
+    CH("PLAYER"):SetDir(RotateTarget(90))
     SCREEN_A:FadeIn(TimeSec(0.5), true)
     subEveFadeAfterTime()
-    CH("PLAYER"):SetMotion(SymMot("EV001_SLEEP02"), LOOP.OFF)
-    CH("PLAYER"):WaitPlayMotion()
-    CH("PLAYER"):DirTo(RotateTarget(90), Speed(350), ROT_TYPE.NEAR)
-    CH("PLAYER"):WaitRotate()
-    TASK:Sleep(TimeSec(0.5))
+    -- CH("PLAYER"):SetMotion(SymMot("EV001_SLEEP02"), LOOP.OFF)
+    -- CH("PLAYER"):WaitPlayMotion()
+    -- CH("PLAYER"):DirTo(RotateTarget(90), Speed(350), ROT_TYPE.NEAR)
+    -- CH("PLAYER"):WaitRotate()
+    -- TASK:Sleep(TimeSec(0.5))
   else
     CAMERA:SetAzimuthDifferenceVolume(Volume(5))
     CAMERA:SetEye(SymCam("CAMERA_00"))
     CAMERA:SetTgt(SymCam("CAMERA_00"))
+    CH("PLAYER"):SetDir(RotateTarget(90))
     SCREEN_A:FadeIn(TimeSec(0.5), true)
     subEveFadeAfterTime()
-    CH("PLAYER"):DirTo(RotateTarget(90), Speed(350), ROT_TYPE.NEAR)
-    TASK:Sleep(TimeSec(0.25))
+    -- CH("PLAYER"):DirTo(RotateTarget(90), Speed(350), ROT_TYPE.NEAR)
+    -- TASK:Sleep(TimeSec(0.25))
   end
   CAMERA:MoveToPlayer(Speed(1.5, ACCEL_TYPE.NONE, DECEL_TYPE.HIGH))
   CAMERA:WaitMove()
