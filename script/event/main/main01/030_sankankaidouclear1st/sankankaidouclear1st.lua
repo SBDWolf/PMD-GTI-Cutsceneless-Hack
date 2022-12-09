@@ -730,7 +730,8 @@ function main01_sankankaidouclear1st12_start()
   if Ground_Save(ground) then
     return
   end
-  SCREEN_A:FadeOutAll(TimeSec(0), true)
+  SCREEN_A:FadeOut(TimeSec(0), true)
+  -- SCREEN_A:FadeOutAll(TimeSec(0), true)
   subSaveflagM01_03_11()
 end
 function main01_sankankaidouclear1st12_end()
