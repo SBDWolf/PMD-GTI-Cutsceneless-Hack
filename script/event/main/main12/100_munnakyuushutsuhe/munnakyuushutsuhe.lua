@@ -5,6 +5,8 @@ end
 function groundStart()
 end
 function main12_munnakyuushutsuhe01_init()
+  subEveFromProgFadeSet()
+  subSaveflagM12_100_02()
 end
 function main12_munnakyuushutsuhe01_start()
   -- CHARA:SetMotionBlendMode(BlendMode.CHANGE_ONLY)
@@ -16,9 +18,9 @@ function main12_munnakyuushutsuhe01_start()
   -- CAMERA:SetDefaultGroundFovy()
   -- CAMERA:ResetAzimuthDifferenceVolume()
   -- MAP:ReturnLightColor(TimeSec(0))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M12_MUNNAKYUUSHUTSUHE_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M12_MUNNAKYUUSHUTSUHE_START
+  -- SYSTEM:NextEntry()
 end
 function main12_munnakyuushutsuhe01_end()
 end

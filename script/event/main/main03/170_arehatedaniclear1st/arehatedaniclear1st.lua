@@ -5,10 +5,12 @@ end
 function groundStart()
 end
 function main03_arehatedaniclear1st01_init()
+  subEveFromProgFadeSet()
+  subSaveflagM03_170_03()
 end
 function main03_arehatedaniclear1st01_start()
 --   CHARA:SetMotionBlendMode(BlendMode.CHANGE_ONLY)
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
 --   TASK:Sleep(TimeSec(1))
 --   CAMERA:SetAzimuthDifferenceVolume(Volume(4.5))
 --   CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -830,9 +832,9 @@ function main03_arehatedaniclear1st01_start()
 --   WINDOW:Narration(TimeSec(0.5), TimeSec(0.5), -1185372582)
 --   WINDOW:Narration(TimeSec(0.5), TimeSec(0.5), -1837763175)
 --   WINDOW:CloseMessage()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M03_AREHATEDANICLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M03_AREHATEDANICLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main03_arehatedaniclear1st01_end()
 end

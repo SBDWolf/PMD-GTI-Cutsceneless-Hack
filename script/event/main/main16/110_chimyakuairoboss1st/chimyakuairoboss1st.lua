@@ -5,9 +5,13 @@ end
 function groundStart()
 end
 function main16_chimyakuairoboss1st01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_06_END
+  FLAG.SCENARIOFLAG = CONST.M16_CHIMYAKUAIROBOSS1ST_START
+  SYSTEM:NextEntry()
 end
 function main16_chimyakuairoboss1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(324, 88, SymAct("EMONGA"), FACE_TYPE.NORMAL)
   -- WINDOW:Talk(SymAct("EMONGA"), 175836995)
@@ -40,9 +44,9 @@ function main16_chimyakuairoboss1st01_start()
   -- WINDOW:SwitchTalk({PARTNER_0 = 1847052871, PARTNER_1 = 1997339398})
   -- WINDOW:CloseMessage()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M16_CHIMYAKUAIROBOSS1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M16_CHIMYAKUAIROBOSS1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main16_chimyakuairoboss1st01_end()
 end

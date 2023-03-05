@@ -5,10 +5,13 @@ end
 function groundStart()
 end
 function main17_grepalacewestbosswin01_init()
-end
-function main17_grepalacewestbosswin01_start()
   SYSTEM:UpdateNextDayParameter()
   subEveFromProgFadeSet()
+  subSaveflagM17_190_03()
+end
+function main17_grepalacewestbosswin01_start()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- subEveFromProgFadeSet()
   -- CHARA:SetMotionBlendMode(BlendMode.CHANGE_ONLY)
   -- CH("MUNNA"):SetMotion(SymMot("EV013_FALL"), LOOP.ON, TimeSec(0))
   -- CH("DOKUROGGU"):SetMotion(SymMot("EV013_FALL"), LOOP.ON, TimeSec(0))
@@ -394,9 +397,9 @@ function main17_grepalacewestbosswin01_start()
   -- WINDOW:NarrationB(TimeSec(0), TimeSec(0), -1125731004)
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:ForceCloseMessage()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M17_GREPALACEWESTBOSSWIN_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M17_GREPALACEWESTBOSSWIN_START
+  -- SYSTEM:NextEntry()
 end
 function main17_grepalacewestbosswin01_end()
 end

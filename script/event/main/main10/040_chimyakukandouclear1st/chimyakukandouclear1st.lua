@@ -5,16 +5,27 @@ end
 function groundStart()
 end
 function main10_chimyakukandouclear1st01_init()
-end
-function main10_chimyakukandouclear1st01_start()
   subEveFromProgFadeSet()
   if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     subComResultClear()
+  end
+  SYSTEM:UpdateNextDayParameter()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUCLEAR1ST_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
+end
+function main10_chimyakukandouclear1st01_start()
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  --   subComResultClear()
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- TASK:Sleep(TimeSec(1))
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -25,9 +36,9 @@ function main10_chimyakukandouclear1st01_start()
   -- TASK:Sleep(TimeSec(2.5))
   -- SOUND:VolumeEnv(Volume(128), TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUCLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUCLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main10_chimyakukandouclear1st01_end()
 end
@@ -589,7 +600,7 @@ function main10_chimyakukandouclear1st06_start()
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(0.5))
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  SYSTEM:UpdateNextDayParameter()
+  -- SYSTEM:UpdateNextDayParameter()
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
   FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUCLEAR1ST_END
   FLAG.MapFlags = CONST.MAP_EVENT

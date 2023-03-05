@@ -6,10 +6,15 @@ function groundStart()
 end
 function main18_hyoushokutai02bosswin01_init()
   FLAG.Boss1stClear = CONST.FLAG_FALSE
-end
-function main18_hyoushokutai02bosswin01_start()
   SYSTEM:UpdateNextDayParameter()
   subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_21_END
+  FLAG.SCENARIOFLAG = CONST.M18_ENDING_START
+  SYSTEM:NextEntry()
+end
+function main18_hyoushokutai02bosswin01_start()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- CH("HYOUSHOKUTAI3"):SetMotionBlendMode(BlendMode.CHANGE_ONLY)
   -- CH("HERO"):SetMotionBlendMode(BlendMode.CHANGE_ONLY)
@@ -74,9 +79,9 @@ function main18_hyoushokutai02bosswin01_start()
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- CAMERA:SetShake(Vector2(0, 0), TimeSec(0))
   -- CAMERA:SetDefaultGroundFovy()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI02BOSSWIN_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI02BOSSWIN_START
+  -- SYSTEM:NextEntry()
 end
 function main18_hyoushokutai02bosswin01_end()
 end

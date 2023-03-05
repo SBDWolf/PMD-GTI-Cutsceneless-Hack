@@ -5,14 +5,23 @@ end
 function groundStart()
 end
 function main03_nuonohanashi01_init()
-end
-function main03_nuonohanashi01_start()
   FLAG.TownRightFlag = CONST.FLAG_FALSE
   FLAG.TownLeftFlag = CONST.FLAG_FALSE
   FLAG.TownMidFlag = CONST.FLAG_FALSE
   FLAG.TownTopFlag = CONST.FLAG_FALSE
   FLAG.TownYado1fFlag = CONST.FLAG_FALSE
   FLAG.TownYado2fFlag = CONST.FLAG_FALSE
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M03_NUONOHANASHI_START
+  SYSTEM:NextEntry()
+end
+function main03_nuonohanashi01_start()
+  -- FLAG.TownRightFlag = CONST.FLAG_FALSE
+  -- FLAG.TownLeftFlag = CONST.FLAG_FALSE
+  -- FLAG.TownMidFlag = CONST.FLAG_FALSE
+  -- FLAG.TownTopFlag = CONST.FLAG_FALSE
+  -- FLAG.TownYado1fFlag = CONST.FLAG_FALSE
+  -- FLAG.TownYado2fFlag = CONST.FLAG_FALSE
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -77,9 +86,9 @@ function main03_nuonohanashi01_start()
   -- WINDOW:CloseMessage()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- subEveFadeAfterTime()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M03_NUONOHANASHI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M03_NUONOHANASHI_START
+  -- SYSTEM:NextEntry()
 end
 function main03_nuonohanashi01_end()
 end

@@ -5,10 +5,19 @@ end
 function groundStart()
 end
 function sub01_sonogo01_init()
-end
-function sub01_sonogo01_start()
   FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
   subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.S1_SONOGO_END
+  FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
+end
+function sub01_sonogo01_start()
+  -- FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  -- subEveFromProgFadeSet()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(1))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -51,9 +60,9 @@ function sub01_sonogo01_start()
   -- WINDOW:SwitchNaration(TimeSec(1), TimeSec(1), {PARTNER_0 = -1091087366, PARTNER_1 = -1477680453})
   -- WINDOW:CloseMessage()
   -- TASK:Sleep(TimeSec(1, TIME_TYPE.FRAME))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.S1_SONOGO_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.S1_SONOGO_START
+  -- SYSTEM:NextEntry()
 end
 function sub01_sonogo01_end()
 end

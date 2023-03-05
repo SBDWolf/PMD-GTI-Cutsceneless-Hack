@@ -5,6 +5,10 @@ end
 function groundStart()
 end
 function main11_furizumu01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M11_FURIZUMU_END
+  SYSTEM:SetDungeonWaypointStat(Dg(11), DG_WAYPOINT.POINT01, DG_WAYPOINT_STAT.AFTER)
+  SYSTEM:EnterDungeon(Dg(11), DG_WAYPOINT.POINT01)
 end
 function main11_furizumu01_start()
   -- subEveFromProgFadeSet()
@@ -352,9 +356,9 @@ function main11_furizumu01_start()
   -- CAMERA:ResetAzimuthDifferenceVolume()
   -- CHARA:SetVisible(SymLayer("LAYER_00"), false)
   -- GIMMICK:SetVisible(SymLayer("LAYER_00"), false)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M11_FURIZUMU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M11_FURIZUMU_START
+  -- SYSTEM:NextEntry()
 end
 function main11_furizumu01_end()
 end

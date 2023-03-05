@@ -5,10 +5,14 @@ end
 function groundStart()
 end
 function main08_doukokunotanibosswin01_init()
-end
-function main08_doukokunotanibosswin01_start()
   SYSTEM:UpdateNextDayParameter()
   subEveFromProgFadeSet()
+  subComResultClear()
+  subSaveflagM08_090_01()
+end
+function main08_doukokunotanibosswin01_start()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- local taskJump = function(chara)
   --   chara:MoveHeightTo(Height(0.1), Speed(1.5))
@@ -149,9 +153,15 @@ end
 function main08_doukokunotanibosswin01_end()
 end
 function subSaveflagM08_090_01()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M08_DOUKOKUNOTANIBOSSWIN_END
+  -- SYSTEM:NextEntry()
+
+  SYSTEM:SetParadiseHomeLevel(PARADISE_HOME_LV.LV_2)
+  SYSTEM:SetParadiseCenterLevel(PARADISE_CENTER_LV.LV_4)
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M08_DOUKOKUNOTANIBOSSWIN_END
-  SYSTEM:NextEntry()
+  FLAG.SCENARIOFLAG = CONST.M09_HANYOU_FREE1_START_FLAG
+  SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY)
 end
 function groundEnd()
 end

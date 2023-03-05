@@ -5,6 +5,9 @@ end
 function groundStart()
 end
 function main06_okanouenoshinkirou01_init()
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M06_OKANOUENOSHINKIROU_START
+  SYSTEM:NextEntry()
 end
 function main06_okanouenoshinkirou01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -87,9 +90,9 @@ function main06_okanouenoshinkirou01_start()
   -- TASK:Sleep(TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M06_OKANOUENOSHINKIROU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M06_OKANOUENOSHINKIROU_START
+  -- SYSTEM:NextEntry()
 end
 function main06_okanouenoshinkirou01_end()
 end

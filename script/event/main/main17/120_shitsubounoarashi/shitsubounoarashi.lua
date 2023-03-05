@@ -16,9 +16,9 @@ function main17_shitsubounoarashi01_start()
   -- TASK:Sleep(TimeSec(2.5))
   -- SOUND:VolumeBgm(Volume(32), TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M17_SHITSUBOUNOARASHI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M17_SHITSUBOUNOARASHI_START
+  -- SYSTEM:NextEntry()
 end
 function main17_shitsubounoarashi01_end()
 end

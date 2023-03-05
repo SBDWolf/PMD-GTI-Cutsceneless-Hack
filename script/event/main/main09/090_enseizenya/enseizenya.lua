@@ -4,19 +4,26 @@ function groundInit()
   if FLAG.EventIrai == CONST.FLAG_TRUE then
     FLAG.EventIrai = CONST.FLAG_FALSE
   end
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M09_ENSEIZENYA_END
+  FLAG.MapFlags = CONST.EV_START_MAP
+  FLAG.FreePlay = CONST.FLAG_FALSE
+  FLAG.TrigNextEvent = CONST.FLAG_TRUE
+  SYSTEM:NextEntry()
 end
 function groundStart()
 end
 function main09_enseizenya01_init()
 end
 function main09_enseizenya01_start()
-  subEveFromProgFadeSet()
-  if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- TASK:Sleep(TimeSec(0.2))
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -120,12 +127,12 @@ function main09_enseizenya01_start()
   -- CH("HERO"):SetVisible(true)
   -- GM("WARABED_NIGHT_01"):SetVisible(true)
   -- GM("WARABED_NIGHT_02"):SetVisible(true)
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M09_ENSEIZENYA_END
-  FLAG.MapFlags = CONST.EV_START_MAP
-  FLAG.FreePlay = CONST.FLAG_FALSE
-  FLAG.TrigNextEvent = CONST.FLAG_TRUE
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M09_ENSEIZENYA_END
+  -- FLAG.MapFlags = CONST.EV_START_MAP
+  -- FLAG.FreePlay = CONST.FLAG_FALSE
+  -- FLAG.TrigNextEvent = CONST.FLAG_TRUE
+  -- SYSTEM:NextEntry()
 end
 function main09_enseizenya01_end()
 end

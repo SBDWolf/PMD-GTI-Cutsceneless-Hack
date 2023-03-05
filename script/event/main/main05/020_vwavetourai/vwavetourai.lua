@@ -5,6 +5,12 @@ end
 function groundStart()
 end
 function main05_vwavetourai01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M05_VWAVETOURAI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main05_vwavetourai01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(2))
@@ -18,9 +24,9 @@ function main05_vwavetourai01_start()
   -- TASK:Sleep(TimeSec(2.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M05_VWAVETOURAI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M05_VWAVETOURAI_START
+  -- SYSTEM:NextEntry()
 end
 function main05_vwavetourai01_end()
 end

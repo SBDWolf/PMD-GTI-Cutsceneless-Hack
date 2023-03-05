@@ -9,12 +9,32 @@ function main03_tontonyamaclear1st01_init()
     subEveFromProgFadeSet()
     subSaveflagM03_070_01()
   end
-end
-function main03_tontonyamaclear1st01_start()
-  FLAG.EncTontonEnter = CONST.ENT_NONE
-  FLAG.EventIrai = CONST.FLAG_FALSE
+
   QUEST:ResultNokotchiQuest()
   subEveFromProgFadeSet()
+  FLAG.EncTontonEnter = CONST.ENT_NONE
+  FLAG.EventIrai = CONST.FLAG_FALSE
+  local resultMenu = CreateRescueResultWindow()
+  resultMenu:Open()
+  SCREEN_A:FadeInAll(TimeSec(0.3), true)
+  SOUND:PlayMe(SymSnd("ME_GAMECLEAR"), Volume(256))
+  function resultMenu:decideAction()
+    resultMenu:ShowDownCursor(false)
+    SCREEN_A:FadeOutAll(TimeSec(0.5), true)
+    self:Close()
+  end
+  SOUND:WaitMe()
+  resultMenu:ShowDownCursor(true)
+  NestMenu_OpenAndCloseWait(resultMenu)
+  SCREEN_A:FadeInAll(TimeSec(0), false)
+  SYSTEM:UpdateNextDayParameter()
+  subSaveflagM03_070_01()
+end
+function main03_tontonyamaclear1st01_start()
+  -- FLAG.EncTontonEnter = CONST.ENT_NONE
+  -- FLAG.EventIrai = CONST.FLAG_FALSE
+  -- QUEST:ResultNokotchiQuest()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.SPECIAL02)
   -- WINDOW:SwitchTalk({PARTNER_0 = 1001631125, PARTNER_1 = 581475540})
@@ -179,25 +199,25 @@ function main03_tontonyamaclear1st01_start()
   -- subEveFadeAfterTime()
   -- CAMERA:ResetAzimuthDifferenceVolume()
   -- SCREEN_A:FadeOutAll(TimeSec(0), false)
-  local resultMenu = CreateRescueResultWindow()
-  resultMenu:Open()
-  SCREEN_A:FadeInAll(TimeSec(0.3), true)
-  SOUND:PlayMe(SymSnd("ME_GAMECLEAR"), Volume(256))
-  function resultMenu:decideAction()
-    resultMenu:ShowDownCursor(false)
-    SCREEN_A:FadeOutAll(TimeSec(0.5), true)
-    self:Close()
-  end
-  SOUND:WaitMe()
-  resultMenu:ShowDownCursor(true)
-  NestMenu_OpenAndCloseWait(resultMenu)
-  SCREEN_A:FadeInAll(TimeSec(0), false)
-  SYSTEM:UpdateNextDayParameter()
-  TASK:Sleep(TimeSec(0.2))
+  -- local resultMenu = CreateRescueResultWindow()
+  -- resultMenu:Open()
+  -- SCREEN_A:FadeInAll(TimeSec(0.3), true)
+  -- SOUND:PlayMe(SymSnd("ME_GAMECLEAR"), Volume(256))
+  -- function resultMenu:decideAction()
+  --   resultMenu:ShowDownCursor(false)
+  --   SCREEN_A:FadeOutAll(TimeSec(0.5), true)
+  --   self:Close()
+  -- end
+  -- SOUND:WaitMe()
+  -- resultMenu:ShowDownCursor(true)
+  -- NestMenu_OpenAndCloseWait(resultMenu)
+  -- SCREEN_A:FadeInAll(TimeSec(0), false)
+  -- SYSTEM:UpdateNextDayParameter()
+  -- TASK:Sleep(TimeSec(0.2))
   -- if Ground_Save(ground) then
   --   return
   -- end
-  subSaveflagM03_070_01()
+  -- subSaveflagM03_070_01()
 end
 function main03_tontonyamaclear1st01_end()
 end

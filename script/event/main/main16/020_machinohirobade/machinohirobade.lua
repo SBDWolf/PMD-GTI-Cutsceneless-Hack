@@ -5,6 +5,12 @@ end
 function groundStart()
 end
 function main16_machinohirobade01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M16_SHUPPATSUNOASA_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main16_machinohirobade01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -121,9 +127,9 @@ function main16_machinohirobade01_start()
   -- WINDOW:ForceCloseMessage()
   -- CH("EMONGA"):ResetManpu()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M16_MACHINOHIROBADE_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M16_MACHINOHIROBADE_START
+  -- SYSTEM:NextEntry()
 end
 function main16_machinohirobade01_end()
 end

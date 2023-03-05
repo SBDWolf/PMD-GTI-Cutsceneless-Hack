@@ -7,7 +7,7 @@ end
 function main18_hyoushokutai01boss1st01_init()
 end
 function main18_hyoushokutai01boss1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- EFFECT:Create("effect01", SymEff("EV_EDDY_WIND_BOSS_LP"))
   -- EFFECT:SetPosition("effect01", SymPos("P01_EFFECT"))
@@ -45,9 +45,9 @@ function main18_hyoushokutai01boss1st01_start()
   -- CAMERA:WaitMove()
   -- TASK:Sleep(TimeSec(1.8))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI01BOSS1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI01BOSS1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main18_hyoushokutai01boss1st01_end()
 end

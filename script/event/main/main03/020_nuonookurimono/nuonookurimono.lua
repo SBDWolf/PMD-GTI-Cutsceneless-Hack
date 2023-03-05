@@ -5,6 +5,12 @@ end
 function groundStart()
 end
 function main03_nuonookurimono01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M03_NUONOOKURIMONO_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main03_nuonookurimono01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -61,9 +67,15 @@ function main03_nuonookurimono01_start()
   -- CH("HERO"):WalkTo(SymPos("P02_HERO"), Speed(1.5))
   -- TASK:Sleep(TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M03_NUONOOKURIMONO_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M03_NUONOOKURIMONO_START
+  -- SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M03_NUONOOKURIMONO_END
+  -- FLAG.MapFlags = CONST.MAP_EVENT
+  -- FLAG.FreePlay = CONST.FLAG_TRUE
+  -- FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  -- SYSTEM:NextEntry()
 end
 function main03_nuonookurimono01_end()
 end
@@ -445,7 +457,7 @@ function main03_nuonookurimono02_start()
   -- subEveNod(CH("HERO"))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  CH("NUOO"):ResetShake()
+  -- CH("NUOO"):ResetShake()
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
   FLAG.SCENARIOFLAG = CONST.M03_NUONOOKURIMONO_END
   FLAG.MapFlags = CONST.MAP_EVENT

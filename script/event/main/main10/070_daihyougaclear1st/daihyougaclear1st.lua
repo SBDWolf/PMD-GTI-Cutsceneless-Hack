@@ -5,17 +5,24 @@ end
 function groundStart()
 end
 function main10_daihyougaclear1st01_init()
-end
-function main10_daihyougaclear1st01_start()
   FLAG.SCENARIOFLAG = CONST.M10_DAIHYOUGACLEAR1ST_START
   subEveFromProgFadeSet()
   if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     subComResultClear()
+  end
+  SYSTEM:UpdateNextDayParameter()
+  subSaveflagM10_070_08()
+end
+function main10_daihyougaclear1st01_start()
+  -- FLAG.SCENARIOFLAG = CONST.M10_DAIHYOUGACLEAR1ST_START
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  --   subComResultClear()
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
   -- WINDOW:SwitchTalk({PARTNER_0 = 658825434, PARTNER_1 = 1046466971})
@@ -77,9 +84,9 @@ function main10_daihyougaclear1st01_start()
   -- WINDOW:SwitchTalk({PARTNER_0 = 891757000, PARTNER_1 = 742133897})
   -- WINDOW:CloseMessage()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M10_DAIHYOUGACLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M10_DAIHYOUGACLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main10_daihyougaclear1st01_end()
 end

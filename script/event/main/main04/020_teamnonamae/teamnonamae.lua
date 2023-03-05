@@ -369,12 +369,18 @@ function main04_teamnonamae01_start()
 --   TASK:Sleep(TimeSec(0.1))
 --   CH("BIRIJION"):WalkTo(SplinePath(SymPos("P00_BIRIJION"), SymPos("P01_BIRIJION")), Speed(1.5))
 --   TASK:Sleep(TimeSec(1))
-  SOUND:FadeOutBgm(TimeSec(1))
+  SOUND:FadeOutBgm(TimeSec(0.5))
   SCREEN_A:FadeOut(TimeSec(0.5), true)
   SOUND:WaitBgm()
   CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M04_TEAMNONAMAE_START
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M04_TEAMNONAMAE_START
+  -- SYSTEM:NextEntry()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M04_TEAMNONAMAE_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
   SYSTEM:NextEntry()
 end
 function main04_teamnonamae01_end()

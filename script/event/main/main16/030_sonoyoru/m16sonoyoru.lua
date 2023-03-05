@@ -433,9 +433,9 @@ function main16_sonoyoru01_start()
   -- })
   -- TASK:Sleep(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M16_SONOYORU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M16_SONOYORU_START
+  -- SYSTEM:NextEntry()
 end
 function main16_sonoyoru01_end()
 end

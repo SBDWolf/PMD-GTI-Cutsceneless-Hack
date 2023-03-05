@@ -9,9 +9,13 @@ function main17_daikesshounotoubosswin01_init()
     subEveFromProgFadeSet()
     subSaveflagM17_260_01()
   end
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_10_END
+  FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI01BOSS1ST_START
+  SYSTEM:NextEntry()
 end
 function main17_daikesshounotoubosswin01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- SYSTEM:UpdateNextDayParameter()
   -- CH("KYUREMU"):SetShadow(false)
@@ -186,7 +190,7 @@ function main17_daikesshounotoubosswin01_start()
   -- if Ground_Save(ground) then
   --   return
   -- end
-  subSaveflagM17_260_01()
+  -- subSaveflagM17_260_01()
 end
 function main17_daikesshounotoubosswin01_end()
 end

@@ -5,6 +5,13 @@ end
 function groundStart()
 end
 function main08_hakobikomaretahoumonsha01_init()
+  -- CAMERA:ResetAzimuthDifferenceVolume()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M08_HAKOBIKOMARETAHOUMONSHA_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main08_hakobikomaretahoumonsha01_start()
   -- CH("YOOTERII"):SetMotionBlendMode(BlendMode.CHANGE_ONLY)
@@ -178,9 +185,9 @@ function main08_hakobikomaretahoumonsha01_start()
   -- TASK:Sleep(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M08_HAKOBIKOMARETAHOUMONSHA_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M08_HAKOBIKOMARETAHOUMONSHA_START
+  -- SYSTEM:NextEntry()
 end
 function main08_hakobikomaretahoumonsha01_end()
 end

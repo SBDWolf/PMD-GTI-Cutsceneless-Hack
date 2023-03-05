@@ -5,9 +5,14 @@ end
 function groundStart()
 end
 function main07_shikisainomorikagetosouguu01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORIKAGETOSOUGUU_END
+  SYSTEM:SetDungeonWaypointStat(Dg(6), DG_WAYPOINT.POINT01, DG_WAYPOINT_STAT.AFTER)
+  SYSTEM:EnterDungeon(Dg(6), DG_WAYPOINT.POINT01)
 end
 function main07_shikisainomorikagetosouguu01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -24,9 +29,9 @@ function main07_shikisainomorikagetosouguu01_start()
   -- WINDOW:CloseMessage()
   -- SOUND:FadeOutEnv(TimeSec(0.3))
   -- SCREEN_A:FadeOut(TimeSec(0.1), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORIKAGETOSOUGUU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORIKAGETOSOUGUU_START
+  -- SYSTEM:NextEntry()
 end
 function main07_shikisainomorikagetosouguu01_end()
 end

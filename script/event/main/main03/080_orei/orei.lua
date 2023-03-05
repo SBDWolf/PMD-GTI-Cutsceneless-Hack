@@ -176,14 +176,15 @@ function main03_orei01_start()
   -- SOUND:VolumeBgm(Volume(128), TimeSec(0.5))
   -- SCREEN_A:FadeOut(TimeSec(0.3), true)
   -- LOWER_SCREEN:SetVisible(true)
-  SOUND:FadeOutBgm(TimeSec(2))
-  SCREEN_A:FadeOut(TimeSec(1.5), true)
+  SOUND:FadeOutBgm(TimeSec(0.5))
+  SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- TASK:Sleep(TimeSec(1))
   CAMERA:ResetAzimuthDifferenceVolume()
   SOUND:WaitBgm()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M03_OREI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M03_OREI_START
+  -- SYSTEM:NextEntry()
+  subSaveflagM03_080_03()
 end
 function main03_orei01_end()
 end
@@ -446,8 +447,14 @@ end
 function main03_orei03_end()
 end
 function subSaveflagM03_080_03()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M03_OREI_END
+  -- SYSTEM:NextEntry()
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M03_OREI_END
+  FLAG.SCENARIOFLAG = CONST.M03_BIRIJION_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
   SYSTEM:NextEntry()
 end
 function groundEnd()

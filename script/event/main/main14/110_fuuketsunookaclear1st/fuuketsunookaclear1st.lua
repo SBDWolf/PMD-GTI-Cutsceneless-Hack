@@ -16,7 +16,9 @@ function main14_fuuketsunookaclear1st01_start()
   -- WINDOW:Talk(SymAct("SAZANDORA"), -1505816083)
   -- WINDOW:CloseMessage()
   -- TASK:Sleep(TimeSec(1, TIME_TYPE.FRAME))
-  subSaveflagM14_110_01()
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M15_PARADISEHE_START
+  SYSTEM:NextEntry()
 end
 function main14_fuuketsunookaclear1st01_end()
 end

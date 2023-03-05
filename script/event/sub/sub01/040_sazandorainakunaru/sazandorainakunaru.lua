@@ -5,15 +5,20 @@ end
 function groundStart()
 end
 function sub01_sazandorainakunaru01_init()
+  subEveFromProgFadeSet()
+  FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.S1_SAZANDORAINAKUNARU_END
+  SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY_ONLY_PARTNER)
 end
 function sub01_sazandorainakunaru01_start()
-  subEveFromProgFadeSet()
-  if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(4.5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -114,10 +119,10 @@ function sub01_sazandorainakunaru01_start()
   -- CH("EMONGA"):WalkTo(SymPos("P02_EMONGA"), Speed(2.5))
   -- TASK:Sleep(TimeSec(2.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.S1_SAZANDORAINAKUNARU_END
-  SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY_ONLY_PARTNER)
+  -- FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.S1_SAZANDORAINAKUNARU_END
+  -- SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY_ONLY_PARTNER)
 end
 function sub01_sazandorainakunaru01_end()
 end

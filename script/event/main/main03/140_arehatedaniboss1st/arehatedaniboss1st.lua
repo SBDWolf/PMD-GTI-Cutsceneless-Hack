@@ -9,9 +9,6 @@ end
 function main03_arehatedaniboss1st01_start()
   subEveFromProgFadeSet()
 
-
-
-  --TASK:Sleep(TimeSec(1))
   CAMERA:SetAzimuthDifferenceVolume(Volume(1))
   CAMERA:SetFovy(SymCam("CAMERA_15_5"))
   CAMERA:SetEye(SymCam("CAMERA_15_5"))
@@ -31,19 +28,18 @@ function main03_arehatedaniboss1st01_start()
   CH("DOKKORAA_2"):SetPosition(SymPos("P01_DOKKORAA_2"))
   CH("DOTEKKOTSU"):SetPosition(SymPos("P02_DOTEKKOTSU"))
 
-
-  CH("FUSHIDE_1"):WalkTo(PosOffs(0.4, -0.5), Speed(10))
-  CH("FUSHIDE_2"):WalkTo(PosOffs(-0.4, -0.4), Speed(10))
-  CH("DENCHURA_1"):WalkTo(PosOffs(0.8, 0), Speed(10))
-  CH("DENCHURA_2"):WalkTo(PosOffs(-1.5, 0), Speed(10))
+  CH("FUSHIDE_1"):WalkTo(PosOffs(0.4, -0.5), Speed(5000))
+  CH("FUSHIDE_2"):WalkTo(PosOffs(-0.4, -0.4), Speed(5000))
+  CH("DENCHURA_1"):WalkTo(PosOffs(0.8, 0), Speed(5000))
+  CH("DENCHURA_2"):WalkTo(PosOffs(-1.5, 0), Speed(5000))
   local taskNokotchiBack = function()
     CH("NOKOTCHI"):SetDir(RotateTarget(180))
-    CH("NOKOTCHI"):WalkTo(PosOffs(0, 0.5), Speed(10), LINK_DIR.OFF)
+    CH("NOKOTCHI"):WalkTo(PosOffs(0, 0.5), Speed(5000), LINK_DIR.OFF)
   end
   TASK:Regist(taskNokotchiBack)
-  CH("HERO"):WalkTo(PosOffs(-0.2, -0.4), Speed(10), LINK_DIR.OFF)
-  CH("PARTNER"):WalkTo(PosOffs(0.2, -0.2), Speed(10), LINK_DIR.OFF)
-  TASK:Sleep(TimeSec(1))
+  CH("HERO"):WalkTo(PosOffs(-0.2, -0.4), Speed(5000), LINK_DIR.OFF)
+  CH("PARTNER"):WalkTo(PosOffs(0.2, -0.2), Speed(5000), LINK_DIR.OFF)
+  TASK:Sleep(TimeSec(0.1))
   CH("DOKKORAA_2"):SetDir(CH("DENCHURA_2"))
   CH("DOKKORAA_1"):SetDir(CH("DENCHURA_1"))
 
@@ -61,8 +57,6 @@ function main03_arehatedaniboss1st01_start()
   CH("PARTNER"):SetDir(CH("FUSHIDE_1"))
   CH("HERO"):SetDir(CH("FUSHIDE_2"))
   CH("BIRIJION"):SetDir(CH("KOMATANA_1"))
-  -- CH("PARTNER"):WaitRotate()
-  -- CH("DOKKORAA_1"):WaitRotate()
   CH("KOMATANA_1"):SetMotion(SymMot("BATTLE"), LOOP.ON, TimeSec(0.2))
   CH("DENCHURA_2"):SetMotion(SymMot("BATTLE"), LOOP.ON, TimeSec(0.2))
 
@@ -84,19 +78,6 @@ function main03_arehatedaniboss1st01_start()
   CH("DOKKORAA_1"):SetMotion(SymMot("BATTLE"), LOOP.ON)
   CH("DOKKORAA_2"):SetMotion(SymMot("BATTLE"), LOOP.ON)
   SCREEN_A:FadeIn(TimeSec(0.5), true)
-
-  -- TASK:Sleep(TimeSec(0.5))
-
-
-
-
-
-
-
-
-
-
-
 
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetFovy(SymCam("CAMERA_00"))

@@ -6,6 +6,9 @@ function groundStart()
 end
 function main01_pokemonnosekaihe01_init()
   FLAG.FreePlay = CONST.FLAG_FALSE
+  FLAG.SceneFlag = CONST.FL_SC_02_END
+  FLAG.ScenarioFlag = CONST.M01_POKEMONNOSEKAIHE_start
+  SYSTEM:NextEntry()
 end
 function main01_pokemonnosekaihe01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(2))
@@ -81,9 +84,9 @@ function main01_pokemonnosekaihe01_start()
   -- SCREEN_A:FadeOut(TimeSec(0), true)
   -- EFFECT:EndMotionBlur()
   -- MAP:ReturnLightColor(TimeSec(0))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.ScenarioFlag = CONST.M01_POKEMONNOSEKAIHE_start
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.ScenarioFlag = CONST.M01_POKEMONNOSEKAIHE_start
+  -- SYSTEM:NextEntry()
 end
 function main01_pokemonnosekaihe01_end()
 end
@@ -98,8 +101,8 @@ function main01_pokemonnosekaihe02_start()
   -- CUT:Wait()
   -- CUT:Destroy()
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_02_END
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_02_END
+  -- SYSTEM:NextEntry()
 end
 function main01_pokemonnosekaihe02_ADV_01()
   CAMERA:SetAzimuthDifferenceVolume(Volume(1))
@@ -132,8 +135,8 @@ function main01_pokemonnosekaihe03_start()
   CH("KIBAGO_H"):SetVisible(false)
   SCREEN_B:FadeOutAll(TimeSec(0), false)
   SCREEN_B:FadeOut(TimeSec(0), false)
-  SCREEN_A:FadeInAll(TimeSec(0), false)
-  SCREEN_A:FadeIn(TimeSec(2), true)
+  SCREEN_A:FadeInAll(TimeSec(0.5), false)
+  SCREEN_A:FadeIn(TimeSec(0.5), false)
   -- SCREEN_A:WhiteIn(TimeSec(0.1), true)
   -- WINDOW:Monologue2(-1472340770)
   -- WINDOW:Monologue2(-1322848865)
@@ -186,7 +189,7 @@ function main01_pokemonnosekaihe03_start()
   -- TASK:Sleep(TimeSec(0.5))
   -- CAMERA:ResetAzimuthDifferenceVolume()
   SOUND:FadeOutBgm(TimeSec(1))
-  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SceneFlag = CONST.FL_SC_06_END
   SYSTEM:NextEntry()
 end
 function main01_pokemonnosekaihe03_end()

@@ -226,9 +226,9 @@ function main10_chimyakukandouenter01_start()
   -- TASK:Sleep(TimeSec(1))
   -- SOUND:FadeOutEnv(TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUENTER_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUENTER_START
+  -- SYSTEM:NextEntry()
 end
 function main10_chimyakukandouenter01_end()
 end

@@ -8,15 +8,21 @@ end
 function groundStart()
 end
 function main09_yorunookanokotchi01_init()
+  subEveFromProgFadeSet()
+  SYSTEM:SetParadiseHomeLevel(PARADISE_HOME_LV.LV_2)
+  SYSTEM:SetParadiseCenterLevel(PARADISE_CENTER_LV.LV_4)
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M09_HANYOU_FREE2_START_FLAG
+  SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY)
 end
 function main09_yorunookanokotchi01_start()
-  subEveFromProgFadeSet()
-  if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- TASK:Sleep(TimeSec(0.2))
   -- MAP:SetVisible(false)
   -- MAP:SetBG(SymMap("IM05_03_SKY_NIGHT"))
@@ -44,9 +50,9 @@ function main09_yorunookanokotchi01_start()
   -- TASK:Sleep(TimeSec(2.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- TASK:Sleep(TimeSec(1))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M09_YORUNOOKANOKOTCHI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M09_YORUNOOKANOKOTCHI_START
+  -- SYSTEM:NextEntry()
 end
 function main09_yorunookanokotchi01_end()
 end

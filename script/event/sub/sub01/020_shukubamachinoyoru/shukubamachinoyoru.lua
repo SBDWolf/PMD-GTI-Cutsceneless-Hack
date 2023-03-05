@@ -5,6 +5,13 @@ end
 function groundStart()
 end
 function sub01_shukubamachinoyoru01_init()
+  FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.S1_SHUKUBAMACHINOYORU_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY_ONLY_PARTNER)
 end
 function sub01_shukubamachinoyoru01_start()
   -- MAP:SetVisible(false)
@@ -14,9 +21,9 @@ function sub01_shukubamachinoyoru01_start()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- MAP:SetVisible(true)
   -- MAP:SetVisibleBG(false)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.S1_SHUKUBAMACHINOYORU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.S1_SHUKUBAMACHINOYORU_START
+  -- SYSTEM:NextEntry()
 end
 function sub01_shukubamachinoyoru01_end()
 end

@@ -5,9 +5,17 @@ end
 function groundStart()
 end
 function main02_daikunitanomu01_init()
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M02_DAIKUNITANOMU_START
+  SYSTEM:NextEntry()
 end
 function main02_daikunitanomu01_start()
-  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  -- FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  -- FLAG.SceneFlag = CONST.FL_SC_03_END
+  -- FLAG.SCENARIOFLAG = CONST.M02_DAIKUNITANOMU_START
+  -- SYSTEM:NextEntry()
+  -- FLAG.TrigNextEvent = CONST.FLAG_FALSE
   -- GIMMICK:SetVisible(SymLayer("SHOP_CHEST"), false)
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -161,9 +169,9 @@ function main02_daikunitanomu01_start()
   -- TASK:Sleep(TimeSec(0.5))
   -- SOUND:FadeOutEnv(TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M02_DAIKUNITANOMU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M02_DAIKUNITANOMU_START
+  -- SYSTEM:NextEntry()
 end
 function main02_daikunitanomu01_end()
 end

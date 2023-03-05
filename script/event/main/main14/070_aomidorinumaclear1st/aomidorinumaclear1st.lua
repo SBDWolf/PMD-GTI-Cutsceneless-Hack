@@ -5,19 +5,28 @@ end
 function groundStart()
 end
 function main14_aomidorinumaclear1st01_init()
-end
-function main14_aomidorinumaclear1st01_start()
   subEveFromProgFadeSet()
   if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     subComResultClear()
+  end
+  SYSTEM:UpdateNextDayParameter()
+  subEveFadeAfterTime()
+  FLAG.SceneFlag = CONST.FL_SC_01_END
+  FLAG.SCENARIOFLAG = CONST.M14_AOMIDORINUMACLEAR1ST_START
+  SYSTEM:NextEntry()
+end
+function main14_aomidorinumaclear1st01_start()
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  --   subComResultClear()
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- TASK:Sleep(TimeSec(1))
-  SYSTEM:UpdateNextDayParameter()
-  subEveFadeAfterTime()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- subEveFadeAfterTime()
   -- CH("DORYUUZU_1"):SetVisible(false)
   -- CH("DORYUUZU_2"):SetVisible(false)
   -- CH("DORYUUZU_3"):SetVisible(false)
@@ -522,9 +531,9 @@ function main14_aomidorinumaclear1st01_start()
   -- SCREEN_A:FadeOut(TimeSec(1.5), true)
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(1.5))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M14_AOMIDORINUMACLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M14_AOMIDORINUMACLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main14_aomidorinumaclear1st01_end()
 end

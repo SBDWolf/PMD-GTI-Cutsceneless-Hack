@@ -9,9 +9,17 @@ function main17_grepalaceeastbosswin01_init()
     subEveFromProgFadeSet()
     subSaveflagM17_110_01()
   end
+  SYSTEM:UpdateNextDayParameter()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M17_SHITSUBOUNOARASHI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main17_grepalaceeastbosswin01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- CHARA:SetMotionBlendMode(BlendMode.CHANGE_ONLY)
   -- CH("DORYUUZU_1"):SetMotion(SymMot("FALL"), LOOP.OFF, TimeSec(0))
@@ -177,12 +185,12 @@ function main17_grepalaceeastbosswin01_start()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- SOUND:WaitEnv()
   -- TASK:Sleep(TimeSec(0.5))
-  SYSTEM:UpdateNextDayParameter()
+  -- SYSTEM:UpdateNextDayParameter()
   -- TASK:Sleep(TimeSec(0.2))
   -- if Ground_Save(ground) then
   --   return
   -- end
-  subSaveflagM17_110_01()
+  -- subSaveflagM17_110_01()
 end
 function main17_grepalaceeastbosswin01_end()
 end

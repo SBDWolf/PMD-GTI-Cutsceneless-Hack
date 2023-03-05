@@ -5,9 +5,14 @@ end
 function groundStart()
 end
 function main17_yuuheinotou01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M17_YUUHEINOTOU_END
+  SYSTEM:SetDungeonWaypointStat(Dg(21), DG_WAYPOINT.POINT01, DG_WAYPOINT_STAT.AFTER)
+  SYSTEM:EnterDungeon(Dg(21), DG_WAYPOINT.POINT01)
 end
 function main17_yuuheinotou01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
 --   TASK:Sleep(TimeSec(1))
 --   SOUND:PlaySe(SymSnd("SE_EVT_DOGA"), Volume(256))
 --   SCREEN_A:WhiteOutAll(TimeSec(0.02), true)
@@ -192,9 +197,9 @@ function main17_yuuheinotou01_start()
 --   TASK:Sleep(TimeSec(0.1))
 --   SCREEN_A:FadeOut(TimeSec(0), false)
 --   SCREEN_A:WhiteInAll(TimeSec(0.02), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M17_YUUHEINOTOU_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M17_YUUHEINOTOU_START
+  -- SYSTEM:NextEntry()
 end
 function main17_yuuheinotou01_end()
 end

@@ -5,9 +5,13 @@ end
 function groundStart()
 end
 function main17_daikesshounotouboss1st01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_END
+  FLAG.SCENARIOFLAG = CONST.M17_DAIKESSHOUNOTOUBOSS1ST_START
+  SYSTEM:NextEntry()
 end
 function main17_daikesshounotouboss1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- EFFECT:Create("effect01", SymEff("EV_EDDY_BIG_LP"))
   -- EFFECT:SetPosition("effect01", SymPos("P01_EFFECT"))
@@ -24,9 +28,9 @@ function main17_daikesshounotouboss1st01_start()
   -- SOUND:FadeOutSe(SymSnd("SE_EVT_EARTHQUAKE_L_LP"), TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:SetDefaultGroundFovy()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M17_DAIKESSHOUNOTOUBOSS1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M17_DAIKESSHOUNOTOUBOSS1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main17_daikesshounotouboss1st01_end()
 end

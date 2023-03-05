@@ -5,6 +5,7 @@ end
 function groundStart()
 end
 function main02_kageroutougeclear1st01_init()
+  subSaveflagM02_150_02()
 end
 function main02_kageroutougeclear1st01_start()
   -- subEveFromProgFadeSet()
@@ -322,9 +323,6 @@ function main02_kageroutougeclear1st01_start()
   -- CAMERA:WaitMove()
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- subEveFadeAfterTime()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M02_KAGEROUTOUGECLEAR1ST_START
-  SYSTEM:NextEntry()
 end
 function main02_kageroutougeclear1st01_end()
 end

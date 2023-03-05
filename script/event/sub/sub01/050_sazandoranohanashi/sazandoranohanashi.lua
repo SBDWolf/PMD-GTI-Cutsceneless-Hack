@@ -5,6 +5,13 @@ end
 function groundStart()
 end
 function sub01_sazandoranohanashi01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.S1_SAZANDORANOHANASHI_END
+  FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function sub01_sazandoranohanashi01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(4.5))
@@ -951,13 +958,13 @@ function sub01_sazandoranohanashi02_start()
   -- SCREEN_A:FadeOut(TimeSec(1.5), true)
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(1.5))
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.S1_SAZANDORANOHANASHI_END
-  FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
-  FLAG.MapFlags = CONST.MAP_EVENT
-  FLAG.FreePlay = CONST.FLAG_TRUE
-  FLAG.TrigNextEvent = CONST.FLAG_FALSE
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.S1_SAZANDORANOHANASHI_END
+  -- FLAG.StoryPlayerMode = CONST.ST_MODE_PARTNER
+  -- FLAG.MapFlags = CONST.MAP_EVENT
+  -- FLAG.FreePlay = CONST.FLAG_TRUE
+  -- FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  -- SYSTEM:NextEntry()
 end
 function sub01_sazandoranohanashi02_end()
 end

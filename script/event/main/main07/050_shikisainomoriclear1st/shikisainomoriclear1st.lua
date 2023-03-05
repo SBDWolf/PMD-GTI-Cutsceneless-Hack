@@ -5,9 +5,14 @@ end
 function groundStart()
 end
 function main07_shikisainomoriclear1st01_init()
+  subEveFromProgFadeSet()
+  subComResultClear()
+  FLAG.SceneFlag = CONST.FL_SC_02_END
+  FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORICLEAR1ST_START
+  SYSTEM:NextEntry()
 end
 function main07_shikisainomoriclear1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.SPECIAL02)
   -- WINDOW:SwitchTalk({PARTNER_0 = 1146912782, PARTNER_1 = 1564979535})
@@ -107,10 +112,10 @@ function main07_shikisainomoriclear1st01_start()
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(0.5))
-  subComResultClear()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORICLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- subComResultClear()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORICLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main07_shikisainomoriclear1st01_end()
 end
@@ -413,9 +418,15 @@ end
 function main07_shikisainomoriclear1st03_end()
 end
 function subSaveflagM07_050_03()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORICLEAR1ST_END
+  -- SYSTEM:NextEntry()
+
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M07_SHIKISAINOMORICLEAR1ST_END
-  SYSTEM:NextEntry()
+  FLAG.SCENARIOFLAG = CONST.M07_HANYOU_FREE_START_FLAG
+  SYSTEM:SetParadiseHomeLevel(PARADISE_HOME_LV.LV_2)
+  SYSTEM:SetParadiseCenterLevel(PARADISE_CENTER_LV.LV_4)
+  SYSTEM:NextSpecialEntry(SPECIAL_ENTRY.NEXT_DAY)
 end
 function groundEnd()
 end

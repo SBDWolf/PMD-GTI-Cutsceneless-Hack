@@ -5,11 +5,15 @@ end
 function groundStart()
 end
 function main15_entennosabakubosswin02_init()
-end
-function main15_entennosabakubosswin02_start()
   subEveFromProgFadeSet()
   subComResultClear()
   SYSTEM:UpdateNextDayParameter()
+  subSaveflagM15_070_08()
+end
+function main15_entennosabakubosswin02_start()
+  -- subEveFromProgFadeSet()
+  -- subComResultClear()
+  -- SYSTEM:UpdateNextDayParameter()
   -- TASK:Sleep(TimeSec(1))
   -- SOUND:PlaySe(SymSnd("SE_EVT_ZAZAZA_LP"), Volume(256))
   -- TASK:Sleep(TimeSec(0.5))
@@ -178,9 +182,9 @@ function main15_entennosabakubosswin02_start()
   -- WINDOW:SwitchTalk({PARTNER_0 = 457964877, PARTNER_1 = 38849548})
   -- WINDOW:CloseMessage()
   -- SOUND:FadeOutEnv(TimeSec(1))
-  FLAG.SceneFlag = CONST.FL_SC_02_END
-  FLAG.SCENARIOFLAG = CONST.M15_ENTENNOSABAKUBOSSWIN_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_02_END
+  -- FLAG.SCENARIOFLAG = CONST.M15_ENTENNOSABAKUBOSSWIN_START
+  -- SYSTEM:NextEntry()
 end
 function main15_entennosabakubosswin02_end()
 end

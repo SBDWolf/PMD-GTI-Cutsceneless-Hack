@@ -5,6 +5,13 @@ end
 function groundStart()
 end
 function main04_dotekkotsugumi01_init()
+  subEveFadeAfterTime()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M04_DOTEKKOTSUGUMI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main04_dotekkotsugumi01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -103,9 +110,9 @@ function main04_dotekkotsugumi01_start()
   -- WINDOW:SwitchTalk({PARTNER_0 = -1825774859, PARTNER_1 = -1207848650})
   -- WINDOW:CloseMessage()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M04_DOTEKKOTSUGUMI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M04_DOTEKKOTSUGUMI_START
+  -- SYSTEM:NextEntry()
 end
 function main04_dotekkotsugumi01_end()
 end
@@ -162,7 +169,7 @@ function main04_dotekkotsugumi03_start()
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
   -- SCREEN_A:FadeIn(TimeSec(0.5), true)
-  subEveFadeAfterTime()
+  -- subEveFadeAfterTime()
   -- WINDOW:DrawFace(324, 88, SymAct("DOTEKKOTSU"), FACE_TYPE.SPECIAL04)
   -- WINDOW:Talk(SymAct("DOTEKKOTSU"), 12441171)
   -- WINDOW:Talk(SymAct("DOTEKKOTSU"), 430368530)

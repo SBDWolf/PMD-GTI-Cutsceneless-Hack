@@ -15,9 +15,9 @@ function main16_daihyougahefutatabi01_start()
   -- CAMERA:SetDefaultGroundFovy()
   -- CAMERA:ResetAzimuthDifferenceVolume()
   -- MAP:ReturnLightColor(TimeSec(0))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M16_DAIHYOUGAHEFUTATABI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M16_DAIHYOUGAHEFUTATABI_START
+  -- SYSTEM:NextEntry()
 end
 function main16_daihyougahefutatabi01_end()
 end
@@ -240,7 +240,7 @@ function main16_daihyougahefutatabi02_start()
   -- CH("NOKOTCHI"):ResetManpu()
   -- SCREEN_A:FadeOut(TimeSec(1.5), true)
   -- TASK:Sleep(TimeSec(0.5))
-  subMapCameraDefMode()
+  -- subMapCameraDefMode()
   -- TASK:Sleep(TimeSec(0.2))
   -- if Ground_Save(ground) then
   --   return

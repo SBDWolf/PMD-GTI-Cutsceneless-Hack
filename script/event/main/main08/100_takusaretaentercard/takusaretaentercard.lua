@@ -7,14 +7,14 @@ end
 function main08_takusaretaentercard01_init()
 end
 function main08_takusaretaentercard01_start()
-  if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
-    TASK:Sleep(TimeSec(0.2))
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  --   TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  else
-    subEveFromProgFadeSet()
-  end
+  -- else
+    -- subEveFromProgFadeSet()
+  -- end
   -- GIMMICK:SetVisible(SymLayer("SHOP_CHEST"), false)
   -- local taskJump = function(chara)
   --   chara:MoveHeightTo(Height(0.1), Speed(1.5))

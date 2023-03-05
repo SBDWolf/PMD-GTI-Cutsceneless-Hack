@@ -5,6 +5,12 @@ end
 function groundStart()
 end
 function main09_kujibiki01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M09_KUJIBIKI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main09_kujibiki01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -446,12 +452,12 @@ function main09_kujibiki01_start()
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- SOUND:WaitBgm()
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M09_KUJIBIKI_END
-  FLAG.MapFlags = CONST.MAP_EVENT
-  FLAG.FreePlay = CONST.FLAG_TRUE
-  FLAG.TrigNextEvent = CONST.FLAG_FALSE
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M09_KUJIBIKI_END
+  -- FLAG.MapFlags = CONST.MAP_EVENT
+  -- FLAG.FreePlay = CONST.FLAG_TRUE
+  -- FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  -- SYSTEM:NextEntry()
 end
 function main09_kujibiki01_end()
 end

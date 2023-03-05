@@ -9,9 +9,12 @@ function sub01_sekainohesoclear1st01_init()
     subEveFromProgFadeSet()
     subSaveflagS01_070_01()
   end
+  subEveFromProgFadeSet()
+  FLAG.StoryPlayerMode = CONST.ST_MODE_NONE
+  subSaveflagS01_070_01()
 end
 function sub01_sekainohesoclear1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.THINK)
   -- WINDOW:SwitchTalk({PARTNER_0 = -941608643, PARTNER_1 = -553975684})
@@ -27,8 +30,8 @@ function sub01_sekainohesoclear1st01_start()
   -- if Ground_Save(ground) then
   --   return
   -- end
-  FLAG.StoryPlayerMode = CONST.ST_MODE_NONE
-  subSaveflagS01_070_01()
+  -- FLAG.StoryPlayerMode = CONST.ST_MODE_NONE
+  -- subSaveflagS01_070_01()
 end
 function sub01_sekainohesoclear1st01_end()
 end

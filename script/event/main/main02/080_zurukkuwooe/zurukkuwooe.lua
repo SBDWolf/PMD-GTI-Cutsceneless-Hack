@@ -8,7 +8,6 @@ function main02_zurukkuwooe01_init()
 end
 function main02_zurukkuwooe01_start()
   FLAG.TrigNextEvent = CONST.FLAG_FALSE
-
   CH("HERO"):SetPosition(SymPos("P00_HERO"))
   CH("PARTNER"):SetPosition(SymPos("P01_PARTNER"))
   CH("HERO"):SetDir(CH("PARTNER"))

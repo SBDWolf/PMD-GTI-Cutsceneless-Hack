@@ -55,9 +55,13 @@ function main16_shuppatsuok01_start()
       SOUND:FadeOutBgm(TimeSec(0.5))
       SOUND:FadeOutEnv(TimeSec(0.5))
       subEveStartFadeSet()
-      TASK:Sleep(TimeSec(1))
+      -- TASK:Sleep(TimeSec(1))
+
       FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-      FLAG.SCENARIOFLAG = CONST.M16_SHUPPATSUOK_END
+      FLAG.SCENARIOFLAG = CONST.M16_DAIHYOUGAHEFUTATABI_END
+      subMapCameraDefMode()
+      -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+      -- FLAG.SCENARIOFLAG = CONST.M16_SHUPPATSUOK_END
       FLAG.StoryPlayerMode = CONST.ST_MODE_NONE
       FLAG.MapFlags = CONST.EV_START_MAP
       FLAG.FreePlay = CONST.FLAG_FALSE

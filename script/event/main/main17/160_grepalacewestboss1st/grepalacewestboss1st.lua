@@ -5,9 +5,13 @@ end
 function groundStart()
 end
 function main17_grepalacewestboss1st01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M17_GREPALACEWESTBOSS1ST_START
+  SYSTEM:NextEntry()
 end
 function main17_grepalacewestboss1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- EFFECT:Create("effect01", SymEff("EV_EDDY_SMALL_LP"))
   -- EFFECT:SetPosition("effect01", SymPos("P01_EFFECT"))
@@ -31,9 +35,9 @@ function main17_grepalacewestboss1st01_start()
   -- CAMERA:SetShake(Vector2(0, 0), TimeSec(0))
   -- TASK:Sleep(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M17_GREPALACEWESTBOSS1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M17_GREPALACEWESTBOSS1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main17_grepalacewestboss1st01_end()
 end

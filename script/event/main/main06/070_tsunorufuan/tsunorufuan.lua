@@ -8,6 +8,9 @@ end
 function groundStart()
 end
 function main06_tsunorufuan01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_END
+  FLAG.SCENARIOFLAG = CONST.M06_TSUNORUFUAN_START
+  SYSTEM:NextEntry()
 end
 function main06_tsunorufuan01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -201,9 +204,9 @@ function main06_tsunorufuan01_start()
   -- subEveFadeAfterTime()
   -- CAMERA:ResetAzimuthDifferenceVolume()
   -- SOUND:WaitBgm()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M06_TSUNORUFUAN_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M06_TSUNORUFUAN_START
+  -- SYSTEM:NextEntry()
 end
 function main06_tsunorufuan01_end()
 end

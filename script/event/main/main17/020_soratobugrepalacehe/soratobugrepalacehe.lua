@@ -15,9 +15,9 @@ function main17_soratobugrepalacehe01_start()
   -- SCREEN_A:FadeIn(TimeSec(0.5), true)
   -- TASK:Sleep(TimeSec(2.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M17_SORATOBUGREPALACEHE_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M17_SORATOBUGREPALACEHE_START
+  -- SYSTEM:NextEntry()
 end
 function main17_soratobugrepalacehe01_end()
 end

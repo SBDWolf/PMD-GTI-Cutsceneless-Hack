@@ -5,18 +5,26 @@ end
 function groundStart()
 end
 function main13_genoueakandouclear1st01_init()
-end
-function main13_genoueakandouclear1st01_start()
   subEveFromProgFadeSet()
-  FLAG.SCENARIOFLAG = CONST.M13_GENOUEAKANDOUCLEAR1ST_START
   if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     subComResultClear()
+  end
+  SYSTEM:UpdateNextDayParameter()
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M13_GENOUEAKANDOUCLEAR1ST_START
+  SYSTEM:NextEntry()
+end
+function main13_genoueakandouclear1st01_start()
+  -- subEveFromProgFadeSet()
+  -- FLAG.SCENARIOFLAG = CONST.M13_GENOUEAKANDOUCLEAR1ST_START
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  --   subComResultClear()
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
-  SYSTEM:UpdateNextDayParameter()
+  -- end
+  -- SYSTEM:UpdateNextDayParameter()
   -- TASK:Sleep(TimeSec(1))
   -- TASK:Sleep(TimeSec(0.5))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.THINK)
@@ -238,16 +246,16 @@ function main13_genoueakandouclear1st01_start()
   -- WINDOW:CloseMessage()
   -- SOUND:FadeOutEnv(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(1), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M13_GENOUEAKANDOUCLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M13_GENOUEAKANDOUCLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main13_genoueakandouclear1st01_end()
 end
 function main13_genoueakandouclear1st02_init()
 end
 function main13_genoueakandouclear1st02_start()
-  SYSTEM:UpdateNextDayParameter()
+  -- SYSTEM:UpdateNextDayParameter()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(2))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -514,6 +522,8 @@ end
 function main13_genoueakandouclear1st04_init()
 end
 function main13_genoueakandouclear1st04_start()
+  -- yep, UpdateNextDayParameter() gets called twice. that is what the original game does, so i'm keeping it
+  SYSTEM:UpdateNextDayParameter()
   CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   CAMERA:SetEye(SymCam("CAMERA_00"))
   CAMERA:SetTgt(SymCam("CAMERA_00"))

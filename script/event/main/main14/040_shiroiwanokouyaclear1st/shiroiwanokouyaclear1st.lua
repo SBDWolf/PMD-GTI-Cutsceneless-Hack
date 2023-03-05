@@ -5,10 +5,13 @@ end
 function groundStart()
 end
 function main14_shiroiwanokouyaclear1st01_init()
-end
-function main14_shiroiwanokouyaclear1st01_start()
   subEveFromProgFadeSet()
   subComResultClear()
+  subSaveflagM14_040_10()
+end
+function main14_shiroiwanokouyaclear1st01_start()
+  -- subEveFromProgFadeSet()
+  -- subComResultClear()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("HERO"), FACE_TYPE.PAIN)
   -- WINDOW:Monologue(178391453)
@@ -20,7 +23,7 @@ function main14_shiroiwanokouyaclear1st01_start()
   -- WINDOW:Talk(SymAct("SAZANDORA"), 1859046553)
   -- WINDOW:CloseMessage()
   -- TASK:Sleep(TimeSec(0.5))
-  subSaveflagM14_040_01()
+  -- subSaveflagM14_040_01()
 end
 function main14_shiroiwanokouyaclear1st01_end()
 end

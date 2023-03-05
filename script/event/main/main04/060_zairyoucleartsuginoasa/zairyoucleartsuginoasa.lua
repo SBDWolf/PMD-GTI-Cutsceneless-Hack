@@ -7,10 +7,17 @@ end
 function main04_zairyoucleartsuginoasa01_init()
   FLAG.MapFrom = CONST.MAP_EVENT
   FLAG.MapFlags = CONST.MAP_PARA_HOME_IN
-end
-function main04_zairyoucleartsuginoasa01_start()
   SYSTEM:ForceUpdateBoardQuest()
   subEveFromProgFadeSet()
+  FLAG.SCENARIOFLAG = CONST.M04_ZAIRYOUCLEARTSUGINOASA_END
+  FLAG.MapFlags = CONST.EV_START_MAP
+  FLAG.FreePlay = CONST.FLAG_FALSE
+  FLAG.TrigNextEvent = CONST.FLAG_TRUE
+  SYSTEM:NextEntry()
+end
+function main04_zairyoucleartsuginoasa01_start()
+  -- SYSTEM:ForceUpdateBoardQuest()
+  -- subEveFromProgFadeSet()
   -- WINDOW:Narration(TimeSec(0.3), TimeSec(0.3), 386370442)
   -- WINDOW:CloseMessage()
   -- TASK:Sleep(TimeSec(0.5))
@@ -41,11 +48,11 @@ function main04_zairyoucleartsuginoasa01_start()
   -- WINDOW:SwitchTalk({PARTNER_0 = 1480990029, PARTNER_1 = -539098750})
   -- WINDOW:CloseMessage()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SCENARIOFLAG = CONST.M04_ZAIRYOUCLEARTSUGINOASA_END
-  FLAG.MapFlags = CONST.EV_START_MAP
-  FLAG.FreePlay = CONST.FLAG_FALSE
-  FLAG.TrigNextEvent = CONST.FLAG_TRUE
-  SYSTEM:NextEntry()
+  -- FLAG.SCENARIOFLAG = CONST.M04_ZAIRYOUCLEARTSUGINOASA_END
+  -- FLAG.MapFlags = CONST.EV_START_MAP
+  -- FLAG.FreePlay = CONST.FLAG_FALSE
+  -- FLAG.TrigNextEvent = CONST.FLAG_TRUE
+  -- SYSTEM:NextEntry()
 end
 function main04_zairyoucleartsuginoasa01_end()
 end

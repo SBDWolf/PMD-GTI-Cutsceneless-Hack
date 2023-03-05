@@ -5,9 +5,23 @@ end
 function groundStart()
 end
 function main02_kouzannodoukutsuclear1st01_init()
+  subEveFromProgFadeSet()
+  subComResultClear()
+  SYSTEM:UpdateNextDayParameter()
+  SYSTEM:DebugPrint("scenarioFlag .................. " .. FLAG.scenarioFlag:getDebugValueName())
+  FLAG.SceneFlag = CONST.FL_SC_04_END
+  FLAG.SCENARIOFLAG = CONST.M02_KOUZANNODOUKUTSUCLEAR1ST_START
+  SYSTEM:NextEntry()
 end
 function main02_kouzannodoukutsuclear1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
+  -- subComResultClear()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- SYSTEM:DebugPrint("scenarioFlag .................. " .. FLAG.scenarioFlag:getDebugValueName())
+  -- FLAG.SceneFlag = CONST.FL_SC_04_END
+  -- FLAG.SCENARIOFLAG = CONST.M02_KOUZANNODOUKUTSUCLEAR1ST_START
+  -- SYSTEM:NextEntry()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
   -- WINDOW:SwitchTalk({PARTNER_0 = -1447530252, PARTNER_1 = -1331478091})
@@ -30,7 +44,7 @@ function main02_kouzannodoukutsuclear1st01_start()
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.EMOTION)
   -- WINDOW:SwitchTalk({PARTNER_0 = -1910926, PARTNER_1 = -419830221})
   -- WINDOW:CloseMessage()
-  CAMERA:SetAzimuthDifferenceVolume(Volume(4.5))
+  -- CAMERA:SetAzimuthDifferenceVolume(Volume(4.5))
   -- CAMERA:SetEye(SymCam("CAMERA_01"))
   -- CAMERA:SetTgt(SymCam("CAMERA_01"))
   -- CH("HERO"):WalkTo(SymPos("P02_HERO"), Speed(1.5))
@@ -110,13 +124,13 @@ function main02_kouzannodoukutsuclear1st01_start()
   -- SOUND:FadeOutEnv(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- TASK:Sleep(TimeSec(1))
-  CAMERA:ResetAzimuthDifferenceVolume()
-  subComResultClear()
-  SYSTEM:UpdateNextDayParameter()
-  SYSTEM:DebugPrint("scenarioFlag .................. " .. FLAG.scenarioFlag:getDebugValueName())
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M02_KOUZANNODOUKUTSUCLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- CAMERA:ResetAzimuthDifferenceVolume()
+  -- subComResultClear()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- SYSTEM:DebugPrint("scenarioFlag .................. " .. FLAG.scenarioFlag:getDebugValueName())
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M02_KOUZANNODOUKUTSUCLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main02_kouzannodoukutsuclear1st01_end()
 end

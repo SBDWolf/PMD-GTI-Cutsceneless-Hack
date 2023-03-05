@@ -5,6 +5,14 @@ end
 function groundStart()
 end
 function main09_entercardkansei01_init()
+  subEveFadeAfterTime()
+  subMapCameraTowntopDefMode()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M09_ENTERCARDKANSEI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main09_entercardkansei01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -79,14 +87,14 @@ function main09_entercardkansei01_start()
   -- WINDOW:CloseMessage()
   -- SOUND:FadeOutEnv(TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  subEveFadeAfterTime()
-  subMapCameraTowntopDefMode()
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M09_ENTERCARDKANSEI_END
-  FLAG.MapFlags = CONST.MAP_EVENT
-  FLAG.FreePlay = CONST.FLAG_TRUE
-  FLAG.TrigNextEvent = CONST.FLAG_FALSE
-  SYSTEM:NextEntry()
+  -- subEveFadeAfterTime()
+  -- subMapCameraTowntopDefMode()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M09_ENTERCARDKANSEI_END
+  -- FLAG.MapFlags = CONST.MAP_EVENT
+  -- FLAG.FreePlay = CONST.FLAG_TRUE
+  -- FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  -- SYSTEM:NextEntry()
 end
 function main09_entercardkansei01_end()
 end

@@ -7,6 +7,38 @@ end
 function main09_aratananakama01_init()
 end
 function main09_aratananakama01_start()
+  -- camera is a little wrong here for reason. can't get to the bottom of this, but it doesn't affect gameplay i guess
+  CAMERA:SetAzimuthDifferenceVolume(Volume(3.5))
+  CAMERA:SetEye(SymCam("CAMERA_09_5"))
+  CAMERA:SetTgt(SymCam("CAMERA_09_5"))
+  CH("HERO"):SetPosition(SymPos("P01_HERO"))
+  CH("PARTNER"):SetPosition(SymPos("P01_PARTNER"))
+  CH("PARTNER"):SetDir(CH("HERO"))
+  CH("DOKKORAA_2"):SetPosition(SymPos("P00_DOKKORAA_2"))
+  CH("DOKKORAA_2"):SetDir(CH("HERO"))
+  CH("NOKOTCHI"):SetPosition(SymPos("P00_NOKOTCHI"))
+  CH("NOKOTCHI"):SetDir(CH("HERO"))
+  CH("NUOO"):SetPosition(SymPos("P01_NUOO"))
+  CH("NUOO"):SetDir(CH("HERO"))
+  CH("BIRIJION"):SetDir(CH("HERO"))
+  CH("EEFI"):SetDir(CH("HERO"))
+  CH("MINEZUMI"):SetPosition(SymPos("P00_MINEZUMI"))
+  CH("MINEZUMI"):SetDir(CH("HERO"))
+  CH("HERO"):SetPosition(SymPos("P02_HERO"))
+  CH("EMONGA"):SetPosition(SymPos("P02_EMONGA"))
+  CH("EMONGA"):SetDir(CH("HERO"))
+  CH("HERO"):SetDir(CH("EMONGA"))
+  CH("DOKKORAA_1"):SetPosition(SymPos("P00_DOKKORAA_1"))
+  CH("DOKKORAA_1"):SetDir(SymPos("P02_HERO"))
+  CH("BURAKKII"):SetDir(CH("EMONGA"))
+  CH("ZURUGGU"):SetPosition(SymPos("P00_ZURUGGU"))
+  CH("ZURUGGU"):SetDir(CH("BURAKKII"))
+  CH("DOTEKKOTSU"):SetPosition(SymPos("P01_DOTEKKOTSU"))
+  CH("DOTEKKOTSU"):SetDir(CH("BURAKKII"))
+  CH("WASHIBON"):SetPosition(SymPos("P00_WASHIBON"))
+  CH("WASHIBON"):SetDir(CH("BURAKKII"))
+  CHARA:SetMotionBlendMode(BlendMode.CHANGE_ONLY)
+  SCREEN_A:FadeIn(TimeSec(0.5), true)
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(4))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -585,67 +617,67 @@ function main09_aratananakama01_start()
   -- WINDOW:DrawFace(272, 16, SymAct("HERO"), FACE_TYPE.THINK)
   -- WINDOW:Monologue(1740054520)
   -- WINDOW:CloseMessage()
-  -- do
-  --   local __LB_SCOPE = function()
-  --     local __scopeFuncTbl = {}
-  --     function __scopeFuncTbl.__LB_FIRST()
-  --     end
-  --     function __scopeFuncTbl.CELECT_EVENT01()
-  --       WINDOW:SysMsg(248103892)
-  --       local __labelCnt = 0
-  --       local __labelTbl = {}
-  --       WINDOW:SelectStart()
-  --       WINDOW:SelectChain(399700629, __labelCnt)
-  --       __labelTbl[__labelCnt] = __scopeFuncTbl.LABEL_YES
-  --       __labelCnt = __labelCnt + 1
-  --       WINDOW:SelectChain(1023385942, __labelCnt)
-  --       __labelTbl[__labelCnt] = __scopeFuncTbl.LABEL_NO
-  --       __labelCnt = __labelCnt + 1
-  --       local __res = WINDOW:SelectEnd(MENU_SELECT_MODE.DISABLE_CANCEL)
-  --       return __labelTbl[__res]
-  --     end
-  --     function __scopeFuncTbl.LABEL_YES()
-  --       return __scopeFuncTbl.LABEL_END
-  --     end
-  --     function __scopeFuncTbl.LABEL_NO()
-  --       WINDOW:DrawFace(272, 16, SymAct("HERO"), FACE_TYPE.THINK)
-  --       WINDOW:Monologue(635736087)
-  --       WINDOW:Monologue(1789200080)
-  --       WINDOW:Monologue(1941845905)
-  --       WINDOW:CloseMessage()
-  --       CH("HERO"):DirTo(CH("DOKKORAA_2"), Speed(200), ROT_TYPE.NEAR)
-  --       CH("HERO"):WaitRotate()
-  --       TASK:Sleep(TimeSec(0.5))
-  --       CH("HERO"):DirTo(CH("EEFI"), Speed(200), ROT_TYPE.NEAR)
-  --       CH("HERO"):WaitRotate()
-  --       TASK:Sleep(TimeSec(0.5))
-  --       CH("HERO"):DirTo(CH("EMONGA"), Speed(200), ROT_TYPE.NEAR)
-  --       CH("HERO"):WaitRotate()
-  --       TASK:Sleep(TimeSec(0.5))
-  --       SOUND:PlaySe(SymSnd("SE_EVT_SIGN_HURRY"), Volume(256))
-  --       CH("HERO"):SetManpu("MP_FLY_SWEAT")
-  --       CH("HERO"):WaitManpu()
-  --       WINDOW:DrawFace(272, 16, SymAct("HERO"), FACE_TYPE.THINK)
-  --       WINDOW:Monologue(1486054482)
-  --       WINDOW:Monologue(1099453715)
-  --       WINDOW:Monologue(-972011044)
-  --       WINDOW:CloseMessage()
-  --       TASK:Sleep(TimeSec(0.2))
-  --       WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
-  --       WINDOW:SwitchTalk({PARTNER_0 = -552896355, PARTNER_1 = -1779090503})
-  --       WINDOW:SwitchTalk({PARTNER_0 = -1930556680, PARTNER_1 = -1480369861})
-  --       WINDOW:CloseMessage()
-  --       return __scopeFuncTbl.LABEL_END
-  --     end
-  --     function __scopeFuncTbl.LABEL_END()
-  --     end
-  --     local __next = __scopeFuncTbl.CELECT_EVENT01
-  --     while __next ~= nil do
-  --       __next = __next()
-  --     end
-  --   end
-  --   __LB_SCOPE()
-  -- end
+  do
+    local __LB_SCOPE = function()
+      local __scopeFuncTbl = {}
+      function __scopeFuncTbl.__LB_FIRST()
+      end
+      function __scopeFuncTbl.CELECT_EVENT01()
+        WINDOW:SysMsg(248103892)
+        local __labelCnt = 0
+        local __labelTbl = {}
+        WINDOW:SelectStart()
+        WINDOW:SelectChain(399700629, __labelCnt)
+        __labelTbl[__labelCnt] = __scopeFuncTbl.LABEL_YES
+        __labelCnt = __labelCnt + 1
+        WINDOW:SelectChain(1023385942, __labelCnt)
+        __labelTbl[__labelCnt] = __scopeFuncTbl.LABEL_NO
+        __labelCnt = __labelCnt + 1
+        local __res = WINDOW:SelectEnd(MENU_SELECT_MODE.DISABLE_CANCEL)
+        return __labelTbl[__res]
+      end
+      function __scopeFuncTbl.LABEL_YES()
+        return __scopeFuncTbl.LABEL_END
+      end
+      function __scopeFuncTbl.LABEL_NO()
+        WINDOW:DrawFace(272, 16, SymAct("HERO"), FACE_TYPE.THINK)
+        WINDOW:Monologue(635736087)
+        WINDOW:Monologue(1789200080)
+        WINDOW:Monologue(1941845905)
+        WINDOW:CloseMessage()
+        CH("HERO"):DirTo(CH("DOKKORAA_2"), Speed(200), ROT_TYPE.NEAR)
+        CH("HERO"):WaitRotate()
+        TASK:Sleep(TimeSec(0.5))
+        CH("HERO"):DirTo(CH("EEFI"), Speed(200), ROT_TYPE.NEAR)
+        CH("HERO"):WaitRotate()
+        TASK:Sleep(TimeSec(0.5))
+        CH("HERO"):DirTo(CH("EMONGA"), Speed(200), ROT_TYPE.NEAR)
+        CH("HERO"):WaitRotate()
+        TASK:Sleep(TimeSec(0.5))
+        SOUND:PlaySe(SymSnd("SE_EVT_SIGN_HURRY"), Volume(256))
+        CH("HERO"):SetManpu("MP_FLY_SWEAT")
+        CH("HERO"):WaitManpu()
+        WINDOW:DrawFace(272, 16, SymAct("HERO"), FACE_TYPE.THINK)
+        WINDOW:Monologue(1486054482)
+        WINDOW:Monologue(1099453715)
+        WINDOW:Monologue(-972011044)
+        WINDOW:CloseMessage()
+        TASK:Sleep(TimeSec(0.2))
+        WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
+        WINDOW:SwitchTalk({PARTNER_0 = -552896355, PARTNER_1 = -1779090503})
+        WINDOW:SwitchTalk({PARTNER_0 = -1930556680, PARTNER_1 = -1480369861})
+        WINDOW:CloseMessage()
+        return __scopeFuncTbl.LABEL_END
+      end
+      function __scopeFuncTbl.LABEL_END()
+      end
+      local __next = __scopeFuncTbl.CELECT_EVENT01
+      while __next ~= nil do
+        __next = __next()
+      end
+    end
+    __LB_SCOPE()
+  end
   -- CH("HERO"):DirTo(CH("PARTNER"), Speed(200), ROT_TYPE.NEAR)
   -- CH("HERO"):WaitRotate()
   -- CH("HERO"):SetFacialMotion(FACIAL_MOTION.HAPPY)
@@ -827,6 +859,10 @@ function main09_aratananakama01_start()
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(0.5))
   -- CAMERA:ResetAzimuthDifferenceVolume()
+  SOUND:FadeOutBgm(TimeSec(0.5))
+  SCREEN_A:FadeOut(TimeSec(0.5), true)
+  SOUND:WaitBgm()
+  CAMERA:ResetAzimuthDifferenceVolume()
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
   FLAG.SCENARIOFLAG = CONST.M09_ARATANANAKAMA_END
   FLAG.MapFlags = CONST.MAP_EVENT

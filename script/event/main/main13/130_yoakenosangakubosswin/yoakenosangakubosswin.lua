@@ -9,6 +9,10 @@ function main13_yoakenosangakubosswin01_init()
     subEveFromProgFadeSet()
     subSaveflagM13_130_01()
   end
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_08_END
+  FLAG.SCENARIOFLAG = CONST.M14_SHINSOU_START
+  SYSTEM:NextEntry()
 end
 function main13_yoakenosangakubosswin01_start()
   -- CH("DORYUUZU_1"):SetVisible(false)
@@ -27,7 +31,7 @@ function main13_yoakenosangakubosswin01_start()
   -- CH("DOKUROGGU"):SetMotion(SymMot("EV013_FALL"), LOOP.ON, TimeSec(0))
   -- CH("SHANDERA_ZERO_1"):SetMotion(SymMot("EV013_FALL"), LOOP.ON, TimeSec(0))
   -- CH("GIGAIASU_1"):SetMotion(SymMot("EV013_FALL"), LOOP.ON, TimeSec(0))
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- CAMERA:SetFovy(SymCam("CAMERA_01"))
   -- CAMERA:MoveFollow(SymCam("CAMERA_01"), Speed(0.25, ACCEL_TYPE.NONE, DECEL_TYPE.HIGH))
   -- SOUND:FadeInEnv(SymSnd("SE_ENV_CLIFF_LP"), TimeSec(0.5), Volume(256))
@@ -344,7 +348,7 @@ function main13_yoakenosangakubosswin01_start()
   -- if Ground_Save(ground) then
   --   return
   -- end
-  subSaveflagM13_130_01()
+  -- subSaveflagM13_130_01()
 end
 function main13_yoakenosangakubosswin01_end()
 end

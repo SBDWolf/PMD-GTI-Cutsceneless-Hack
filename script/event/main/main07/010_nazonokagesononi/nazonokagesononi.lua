@@ -5,15 +5,19 @@ end
 function groundStart()
 end
 function main07_nazonokagesononi01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_01_END
+  FLAG.SCENARIOFLAG = CONST.M07_NAZONOKAGESONONI_START
+  SYSTEM:NextEntry()
 end
 function main07_nazonokagesononi01_start()
-  subEveFromProgFadeSet()
-  if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
-  end
+  -- end
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(1))
   -- CUT:Load(SymCut("CUT_M07_010_01"))
   -- CUT:Play()
@@ -21,9 +25,9 @@ function main07_nazonokagesononi01_start()
   -- CUT:Destroy()
   -- CAMERA:SetDefaultGroundFovy()
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M07_NAZONOKAGESONONI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M07_NAZONOKAGESONONI_START
+  -- SYSTEM:NextEntry()
 end
 function main07_nazonokagesononi01_end()
 end

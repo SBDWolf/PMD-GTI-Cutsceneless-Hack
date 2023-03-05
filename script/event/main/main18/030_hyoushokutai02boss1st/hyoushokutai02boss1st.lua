@@ -6,9 +6,13 @@ function groundStart()
 end
 function main18_hyoushokutai02boss1st01_init()
   FLAG.Boss1stClear = CONST.FLAG_TRUE
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_12_END
+  FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI02BOSS1ST_START
+  SYSTEM:NextEntry()
 end
 function main18_hyoushokutai02boss1st01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- CH("HERO"):SetShadow(false)
   -- CH("PARTNER"):SetShadow(false)
   -- CH("PARTNER"):SetMotion(SymMot("EV018_KNEEATTACHE00"), LOOP.ON, TimeSec(0))
@@ -102,9 +106,9 @@ function main18_hyoushokutai02boss1st01_start()
   -- SOUND:FadeOutEnv(TimeSec(1.5))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:SetShake(Vector2(0, 0), TimeSec(0))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI02BOSS1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M18_HYOUSHOKUTAI02BOSS1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main18_hyoushokutai02boss1st01_end()
 end
@@ -878,6 +882,7 @@ end
 function main18_hyoushokutai02boss1st13_init()
 end
 function main18_hyoushokutai02boss1st13_start()
+  -- camera is slightly wrong here too for some reason, don't know what's going on
   CAMERA:SetAzimuthDifferenceVolume(Volume(1))
   CAMERA:SetEye(SymCam("CAMERA_03_5"))
   CAMERA:SetTgt(SymCam("CAMERA_03_5"))

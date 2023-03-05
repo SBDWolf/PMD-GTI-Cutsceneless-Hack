@@ -5,6 +5,12 @@ end
 function groundStart()
 end
 function main12_tenninoboruhikari01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M12_TENNINOBORUHIKARI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main12_tenninoboruhikari01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -83,9 +89,9 @@ function main12_tenninoboruhikari01_start()
   -- TASK:Sleep(TimeSec(0.8))
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M12_TENNINOBORUHIKARI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M12_TENNINOBORUHIKARI_START
+  -- SYSTEM:NextEntry()
 end
 function main12_tenninoboruhikari01_end()
 end

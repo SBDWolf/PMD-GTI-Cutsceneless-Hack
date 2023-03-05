@@ -5,6 +5,12 @@ end
 function groundStart()
 end
 function main09_nuoonohanashi01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M09_NUOONOHANASHI_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main09_nuoonohanashi01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -92,9 +98,9 @@ function main09_nuoonohanashi01_start()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
   -- TASK:Sleep(TimeSec(0.5))
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M09_NUOONOHANASHI_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M09_NUOONOHANASHI_START
+  -- SYSTEM:NextEntry()
 end
 function main09_nuoonohanashi01_end()
 end

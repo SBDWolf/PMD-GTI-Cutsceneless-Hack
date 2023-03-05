@@ -5,9 +5,13 @@ end
 function groundStart()
 end
 function main02_kageroutougetopclear01_init()
+  subEveFromProgFadeSet()
+  SYSTEM:UpdateNextDayParameter()
+  FLAG.Boss1stClear = CONST.FLAG_FALSE
+  subSaveflagM02_190_02()
 end
 function main02_kageroutougetopclear01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(3))
   -- CAMERA:SetEye(SymCam("CAMERA_04"))
@@ -352,9 +356,9 @@ function main02_kageroutougetopclear01_start()
   -- WINDOW:Narration(TimeSec(0.5), TimeSec(0.5), 2049948892)
   -- WINDOW:CloseMessage()
   -- TASK:Sleep(TimeSec(1, TIME_TYPE.FRAME))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M02_KAGEROUTOUGETOPCLEAR_START
-  SYSTEM:NextEntry()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- FLAG.Boss1stClear = CONST.FLAG_FALSE
+  -- subSaveflagM02_190_02()
 end
 function main02_kageroutougetopclear01_end()
 end
@@ -365,7 +369,7 @@ function main02_kageroutougetopclear02_init()
   end
 end
 function main02_kageroutougetopclear02_start()
-  SYSTEM:UpdateNextDayParameter()
+  -- SYSTEM:UpdateNextDayParameter()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -519,8 +523,8 @@ function main02_kageroutougetopclear02_start()
   -- if Ground_Save(ground) then
   --   return
   -- end
-  FLAG.Boss1stClear = CONST.FLAG_FALSE
-  subSaveflagM02_190_02()
+  -- FLAG.Boss1stClear = CONST.FLAG_FALSE
+  -- subSaveflagM02_190_02()
 end
 function main02_kageroutougetopclear02_end()
 end

@@ -5,6 +5,9 @@ end
 function groundStart()
 end
 function main09_birijionnokako01_init()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M09_BIRIJIONNOKAKO_END
+  SYSTEM:NextEntry()
 end
 function main09_birijionnokako01_start()
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
@@ -298,9 +301,9 @@ function main09_birijionnokako01_start()
   -- SCREEN_A:FadeOut(TimeSec(1.5), true)
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(0.5))
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
-  FLAG.SCENARIOFLAG = CONST.M09_BIRIJIONNOKAKO_END
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  -- FLAG.SCENARIOFLAG = CONST.M09_BIRIJIONNOKAKO_END
+  -- SYSTEM:NextEntry()
 end
 function main09_birijionnokako01_end()
 end

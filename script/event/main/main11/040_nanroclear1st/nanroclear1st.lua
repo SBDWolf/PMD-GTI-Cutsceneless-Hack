@@ -5,8 +5,6 @@ end
 function groundStart()
 end
 function main11_nanroclear1st01_init()
-end
-function main11_nanroclear1st01_start()
   subEveFromProgFadeSet()
   if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     subComResultClear()
@@ -16,6 +14,25 @@ function main11_nanroclear1st01_start()
     -- end
   end
   SYSTEM:UpdateNextDayParameter()
+  subEveFadeAfterTime()
+  FLAG.EncFuuketsuTryFlag = CONST.FLAG_FALSE
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M11_NANROCLEAR1ST_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
+end
+function main11_nanroclear1st01_start()
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  --   subComResultClear()
+    -- TASK:Sleep(TimeSec(0.2))
+    -- if Ground_Save(ground) then
+    --   return
+    -- end
+  -- end
+  -- SYSTEM:UpdateNextDayParameter()
   -- TASK:Sleep(TimeSec(1))
   -- WINDOW:DrawFace(20, 88, SymAct("PARTNER"), FACE_TYPE.NORMAL)
   -- WINDOW:SwitchTalk({PARTNER_0 = -226359081, PARTNER_1 = -342279786})
@@ -101,9 +118,9 @@ function main11_nanroclear1st01_start()
   -- WINDOW:SwitchTalk({PARTNER_0 = 979075807, PARTNER_1 = 591442846})
   -- WINDOW:CloseMessage()
   -- SCREEN_A:FadeOut(TimeSec(0.5), true)
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M11_NANROCLEAR1ST_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M11_NANROCLEAR1ST_START
+  -- SYSTEM:NextEntry()
 end
 function main11_nanroclear1st01_end()
 end

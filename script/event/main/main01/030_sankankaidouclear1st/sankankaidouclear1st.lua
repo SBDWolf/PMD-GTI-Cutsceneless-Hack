@@ -16,13 +16,14 @@ function main01_sankankaidouclear1st01_save_start()
     SYSTEM:NextEntry()
   else
     subComResultClear()
-    TASK:Sleep(TimeSec(0.2))
+    -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
   end
-  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  SYSTEM:UpdateNextDayParameter()
   FLAG.ScenarioFlag = CONST.M01_SANKANKAIDOUCLEAR1ST_START
+  FLAG.SceneFlag = CONST.FL_SC_02_END
   SYSTEM:NextEntry()
 end
 function main01_sankankaidouclear1st01_save_end()
@@ -522,11 +523,11 @@ function main01_sankankaidouclear1st03_start()
   -- WINDOW:Monologue(1176569076)
   -- WINDOW:CloseMessage()
   -- SOUND:VolumeBgm(Volume(128), TimeSec(0.5))
-  SOUND:FadeOutBgm(TimeSec(1))
-  SCREEN_A:FadeOut(TimeSec(1), true)
+  SOUND:FadeOutBgm(TimeSec(0.5))
+  SCREEN_A:FadeOut(TimeSec(0.5), true)
   --SCREEN_A:WhiteOut(TimeSec(0.3), true)
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_08_END
+  FLAG.SceneFlag = CONST.FL_SC_11_END
   SYSTEM:NextEntry()
 end
 function main01_sankankaidouclear1st03_end()
@@ -737,8 +738,11 @@ end
 function main01_sankankaidouclear1st12_end()
 end
 function subSaveflagM01_03_11()
-  FLAG.ScenarioFlag = CONST.M01_SANKANKAIDOUCLEAR1ST_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
   FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M02_SHUKUBAMACHIHE_END
   SYSTEM:NextEntry()
 end
 function groundEnd()

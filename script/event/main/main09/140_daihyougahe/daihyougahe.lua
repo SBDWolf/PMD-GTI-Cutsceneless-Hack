@@ -5,6 +5,13 @@ end
 function groundStart()
 end
 function main09_daihyougahe01_init()
+  SYSTEM:RemovePartyNotForceMemberToWarehouse()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M10_CHIMYAKUKANDOUENTER_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main09_daihyougahe01_start()
   -- CHARA:SetMotionBlendMode(BlendMode.CHANGE_ONLY)
@@ -326,9 +333,9 @@ function main09_daihyougahe01_start()
   -- subEveFadeAfterTime()
   -- CAMERA:SetDefaultGroundFovy()
   -- CAMERA:ResetAzimuthDifferenceVolume()
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M09_DAIHYOUGAHE_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M09_DAIHYOUGAHE_START
+  -- SYSTEM:NextEntry()
 end
 function main09_daihyougahe01_end()
 end

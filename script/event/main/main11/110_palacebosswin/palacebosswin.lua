@@ -9,9 +9,13 @@ function main11_palacebosswin01_init()
     subEveFromProgFadeSet()
     subSaveflagM11_110_01()
   end
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_03_END
+  FLAG.SCENARIOFLAG = CONST.M11_KYUREMU_START
+  SYSTEM:NextEntry()
 end
 function main11_palacebosswin01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -272,7 +276,7 @@ function main11_palacebosswin01_start()
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- SOUND:WaitBgm()
   -- TASK:Sleep(TimeSec(0.5))
-  subSaveflagM11_110_01()
+  -- subSaveflagM11_110_01()
 end
 function main11_palacebosswin01_end()
 end

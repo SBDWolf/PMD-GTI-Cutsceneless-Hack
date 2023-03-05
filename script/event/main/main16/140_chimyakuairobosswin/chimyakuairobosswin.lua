@@ -9,9 +9,18 @@ function main16_chimyakuairobosswin01_init()
     subEveFromProgFadeSet()
     subSaveflagM16_140_01()
   end
+  subEveFromProgFadeSet()
+  SYSTEM:UpdateNextDayParameter()
+  SYSTEM:RemovePartyNotForceMemberToWarehouse()
+  FLAG.SceneFlag = CONST.FL_SC_01_FIRST
+  FLAG.SCENARIOFLAG = CONST.M17_SORATOBUGREPALACEHE_END
+  FLAG.MapFlags = CONST.MAP_EVENT
+  FLAG.FreePlay = CONST.FLAG_TRUE
+  FLAG.TrigNextEvent = CONST.FLAG_FALSE
+  SYSTEM:NextEntry()
 end
 function main16_chimyakuairobosswin01_start()
-  subEveFromProgFadeSet()
+  -- subEveFromProgFadeSet()
   -- TASK:Sleep(TimeSec(1))
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(3))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
@@ -289,8 +298,8 @@ function main16_chimyakuairobosswin01_start()
   -- TASK:Sleep(TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- TASK:Sleep(TimeSec(0.5))
-  SYSTEM:UpdateNextDayParameter()
-  subSaveflagM16_140_01()
+  -- SYSTEM:UpdateNextDayParameter()
+  -- subSaveflagM16_140_01()
 end
 function main16_chimyakuairobosswin01_end()
 end

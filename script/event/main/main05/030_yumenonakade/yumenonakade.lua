@@ -8,16 +8,20 @@ end
 function groundStart()
 end
 function main05_yumenonakade01_init()
+  subEveFromProgFadeSet()
+  FLAG.SceneFlag = CONST.FL_SC_08_END
+  FLAG.SCENARIOFLAG = CONST.M05_YUMENONAKADE_START
+  SYSTEM:NextEntry()
 end
 function main05_yumenonakade01_start()
-  subEveFromProgFadeSet()
-  if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
+  -- subEveFromProgFadeSet()
+  -- if FLAG.NowResumeFlag == CONST.FLAG_FALSE then
     -- TASK:Sleep(TimeSec(0.2))
     -- if Ground_Save(ground) then
     --   return
     -- end
     -- TASK:Sleep(TimeSec(0.2))
-  end
+  -- end
   -- CAMERA:SetAzimuthDifferenceVolume(Volume(5))
   -- CAMERA:SetEye(SymCam("CAMERA_00"))
   -- CAMERA:SetTgt(SymCam("CAMERA_00"))
@@ -36,9 +40,9 @@ function main05_yumenonakade01_start()
   -- SOUND:VolumeEnv(Volume(128), TimeSec(1))
   -- SCREEN_A:FadeOut(TimeSec(1), true)
   -- TASK:Sleep(TimeSec(0.5))
-  FLAG.SceneFlag = CONST.FL_SC_01_END
-  FLAG.SCENARIOFLAG = CONST.M05_YUMENONAKADE_START
-  SYSTEM:NextEntry()
+  -- FLAG.SceneFlag = CONST.FL_SC_01_END
+  -- FLAG.SCENARIOFLAG = CONST.M05_YUMENONAKADE_START
+  -- SYSTEM:NextEntry()
 end
 function main05_yumenonakade01_end()
 end
