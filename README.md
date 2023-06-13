@@ -4,7 +4,7 @@ A Hack of Pokémon Mystery Dungeon: Gates To Infinity (US version) that removes 
 The main Any% portion + the postgame up to Worldcore is finished.
 
 Known issues:
-- The loading time between certain cutscenes is very long, up to 40 seconds at its worst.
+- None!
 
 ---
 
