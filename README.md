@@ -1,5 +1,5 @@
 # PMD-GTI-Cutsceneless-Hack
-A Hack of Pokémon Mystery Dungeon: Gates To Infinity (US version) that removes cutscenes while keeping gameplay as intact as possible.
+A Hack of Pokémon Mystery Dungeon: Gates To Infinity (US version) that removes cutscenes while keeping gameplay as intact as possible. Additionally, the Wondermail code 846CH46F/M2Q37M7M (US/EU) has been modified to give out a Reunion Cape instead of a Gold Ribbon to help practice Wondermail runs without having to learn a different manip.
 
 The main Any% portion + the postgame up to Worldcore is finished.
 
